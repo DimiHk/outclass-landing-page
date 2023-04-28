@@ -2,7 +2,11 @@ import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/pro-regular-svg-icons";
-import { faArrowRight, faDollarSign } from "@fortawesome/pro-solid-svg-icons";
+import {
+  faArrowRight,
+  faDollarSign,
+  faLocationDot,
+} from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRef, useEffect } from "react";
 
@@ -86,6 +90,22 @@ const Home = () => {
           >
             geral@outclasscardetail.com
           </Text>
+        </Flex>
+        <Flex align={"center"} justify={"center"} gap={2}>
+          <Button
+            textColor={"gray.900"}
+            backgroundColor={"whiteAlpha.500"}
+            boxShadow={"dark-lg"}
+            size={"sm"}
+            _hover={{
+              backgroundColor: "blackAlpha.500",
+              color: "white",
+            }}
+          >
+            <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
+              WHERE TO FIND US <FontAwesomeIcon icon={faLocationDot} />
+            </Text>
+          </Button>
         </Flex>
       </Flex>
       <Flex
