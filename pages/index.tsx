@@ -59,17 +59,6 @@ const Home = () => {
           </Text>
         </Flex>
         <Flex align={"center"} justify={"center"} gap={2}>
-          <FontAwesomeIcon icon={faInstagram} color="white" size="lg" />
-          <Text
-            letterSpacing={"2px"}
-            textColor={"white"}
-            fontWeight={"light"}
-            fontSize={"xs"}
-          >
-            @outclasscardetail
-          </Text>
-        </Flex>
-        <Flex align={"center"} justify={"center"} gap={2}>
           <FontAwesomeIcon icon={faWhatsapp} color="white" size="xl" />
           <Text
             letterSpacing={"2px"}
@@ -80,6 +69,18 @@ const Home = () => {
             (+351) 939 235 577
           </Text>
         </Flex>
+        <Flex align={"center"} justify={"center"} gap={2}>
+          <FontAwesomeIcon icon={faInstagram} color="white" size="lg" />
+          <Text
+            letterSpacing={"2px"}
+            textColor={"white"}
+            fontWeight={"light"}
+            fontSize={"xs"}
+          >
+            @outclasscardetail
+          </Text>
+        </Flex>
+
         <Flex align={"center"} justify={"center"} gap={2}>
           <FontAwesomeIcon icon={faAt} color="white" size="lg" />
           <Text
