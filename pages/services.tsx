@@ -1,20 +1,28 @@
 import {
-  Box,
   Button,
   Flex,
   Text,
   Image,
   Divider,
   Badge,
+  Select,
 } from "@chakra-ui/react";
 import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faLocationDot } from "@fortawesome/pro-regular-svg-icons";
 import { faCheckCircle, faCircleXmark } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 
 const Services = () => {
+  const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
+
+  const handleSelectChange = (event) => {
+    setcurrentPlanType(event.target.value);
+  };
+
   return (
-    <Box width={"full"} height={"full"} backgroundColor={"blackAlpha.900"}>
+    <React.Fragment>
       <Flex
         padding={3}
         position={"relative"}
@@ -57,7 +65,6 @@ const Services = () => {
             @outclasscardetail
           </Text>
         </Flex>
-
         <Flex align={"center"} justify={"center"} gap={2}>
           <FontAwesomeIcon icon={faAt} color="white" size="lg" />
           <Text
@@ -188,14 +195,13 @@ const Services = () => {
         direction={"column"}
         width={"full"}
         justify={"center"}
-        padding={4}
-        gap={12}
-        marginTop={4}
+        padding={2.5}
+        gap={6}
       >
         <Flex direction={"column"} gap={2}>
           <Text
             textAlign={"center"}
-            fontSize={"x-large"}
+            fontSize={"xl"}
             letterSpacing={"2px"}
             textColor={"white"}
             fontWeight={"bold"}
@@ -203,19 +209,47 @@ const Services = () => {
           >
             OUTCLASS VALETS
           </Text>
-          <Text
-            textAlign={"center"}
-            fontSize={"large"}
-            letterSpacing={"2px"}
-            textColor={"white"}
-            fontWeight={"semibold"}
-            fontStyle={"italic"}
-          >
-            {
-              "UNLEASH YOUR CAR'S POTENTIAL! DISCOVER OUR SPECIALIZED DETAILING VALET PACKAGES"
-            }
-          </Text>
+          <Flex gap={4} w={"full"} justify={"center"} align={"center"}>
+            <Text
+              textAlign={"center"}
+              fontSize={"md"}
+              letterSpacing={"2px"}
+              fontWeight={"semibold"}
+              fontStyle={"italic"}
+              textColor={"white"}
+            >
+              <span style={{ color: "#68D391" }}>{"DISCOVER "} </span>OUR
+              <span style={{ color: "#68D391" }}>{" SPECIALIZED "}</span>
+              DETAILING
+              <span style={{ color: "#68D391" }}>{" VALET "}</span> PACKAGES
+            </Text>
+            <Select
+              cursor={"pointer"}
+              textColor={"white"}
+              fontWeight={"bold"}
+              letterSpacing={"2px"}
+              width="fit-content"
+              iconColor={"white"}
+              fontSize={"xs"}
+              value={currentPlanType}
+              onChange={handleSelectChange}
+            >
+              <option
+                value={"INTERIOR"}
+                style={{ color: "black", cursor: "pointer" }}
+              >
+                INTERIOR
+              </option>
+              <option
+                value={"EXTERIOR"}
+                style={{ color: "black", cursor: "pointer" }}
+              >
+                EXTERIOR
+              </option>
+            </Select>
+          </Flex>
         </Flex>
+
         <Flex justify={"center"} gap={6} align={"flex-start"}>
           <Flex
             minWidth={"md"}
@@ -252,123 +286,242 @@ const Services = () => {
               </Text>
             </Flex>
             <Divider opacity={"10%"} />
-            <Flex gap={3.5} padding={4} direction={"column"}>
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  METICULOS VACUUM
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  COMPRESSED AIR TECHNIQUE
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
+            <motion.div
+              key={currentPlanType}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              {currentPlanType === "INTERIOR" ? (
+                <Flex gap={3.5} padding={4} direction={"column"}>
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      METICULOS VACUUM
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      COMPRESSED AIR TECHNIQUE
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
 
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  WASHED UPHOLSTERY
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCircleXmark}
-                  color={"danger"}
-                  style={{ color: "#F56565" }}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  CLEAN CARPET
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  CLEAN INTERIOR COPARTIMENT & CONDITIONED
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  AIR FRESHENER
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      WASHED UPHOLSTERY
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCircleXmark}
+                      color={"danger"}
+                      style={{ color: "#F56565" }}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      CLEAN CARPET
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      CLEAN INTERIOR COPARTIMENT & CONDITIONED
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      AIR FRESHENER
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
 
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  COMPLETE HYGIENIZATION - INTERIOR CONDITIONING
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCircleXmark}
-                  color={"danger"}
-                  style={{ color: "#F56565" }}
-                />
-              </Flex>
-            </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      COMPLETE HYGIENIZATION - INTERIOR CONDITIONING
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCircleXmark}
+                      color={"danger"}
+                      style={{ color: "#F56565" }}
+                    />
+                  </Flex>
+                </Flex>
+              ) : (
+                <Flex gap={3.5} padding={4} direction={"column"}>
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      {
+                        <Badge
+                          letterSpacing={"2px"}
+                          fontWeight={"light"}
+                          colorScheme={"green"}
+                          textAlign={"center"}
+                        >
+                          5 STEP
+                        </Badge>
+                      }
+                      {" WASH"}
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      DETAILED ALLOYS
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      WHELL ARM WHOLES
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      DETAILED BRUSH USAGE FOR DIFFICULT ACCESS AREAS
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      TOWEL DRIED
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      TIRE & PLASTIC - DRESSING
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                </Flex>
+              )}
+            </motion.div>
           </Flex>
 
           <Flex
@@ -405,117 +558,268 @@ const Services = () => {
               </Text>
             </Flex>
             <Divider opacity={"10%"} />
-            <Flex gap={3.5} padding={4} direction={"column"}>
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  METICULOS VACUUM
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  COMPRESSED AIR TECHNIQUE
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
+            <motion.div
+              key={currentPlanType}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              {currentPlanType === "INTERIOR" ? (
+                <Flex gap={3.5} padding={4} direction={"column"}>
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      METICULOS VACUUM
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      COMPRESSED AIR TECHNIQUE
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
 
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  WASHED UPHOLSTERY
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  CLEAN CARPET
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={4} justify={"space-between"} align={"center"}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  CLEAN INTERIOR COPARTIMENT & CONDITIONED
-                </Text>
-                <Badge colorScheme="green">DEEP CLEAN</Badge>
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  AIR FRESHENER
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      WASHED UPHOLSTERY
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      CLEAN CARPET
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={4} justify={"space-between"} align={"center"}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      CLEAN INTERIOR COPARTIMENT & CONDITIONED
+                    </Text>
+                    <Badge colorScheme="green">DEEP CLEAN</Badge>
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      AIR FRESHENER
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
 
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  COMPLETE HYGIENIZATION - INTERIOR CONDITIONING
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-            </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      COMPLETE HYGIENIZATION - INTERIOR CONDITIONING
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                </Flex>
+              ) : (
+                <Flex gap={3.5} padding={4} direction={"column"}>
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      {
+                        <Badge
+                          letterSpacing={"2px"}
+                          fontWeight={"light"}
+                          colorScheme={"green"}
+                          textAlign={"center"}
+                        >
+                          7 STEP
+                        </Badge>
+                      }
+                      {" WASH"}
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      DETAILED ALLOYS AND TABS
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      DETAILED DOORS AND FOOTSTEPS
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      DETAILED BRUSH USAGE FOR DIFFICULT ACCESS AREAS
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      TOWEL DRIED
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      TIRE & PLASTIC - DRESSING
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      DETAILED ENGINE BAY
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                  <Divider opacity={"10%"} />
+                  <Flex gap={2}>
+                    <Text
+                      letterSpacing={"2px"}
+                      textColor={"white"}
+                      fontWeight={"light"}
+                      fontSize={"2xs"}
+                    >
+                      POLISHED EXHAUST TIPS
+                    </Text>
+                    <FontAwesomeIcon
+                      opacity={"85%"}
+                      icon={faCheckCircle}
+                      color={"lightGreen"}
+                    />
+                  </Flex>
+                </Flex>
+              )}
+            </motion.div>
           </Flex>
 
           <Flex
@@ -552,108 +856,116 @@ const Services = () => {
               </Text>
             </Flex>
             <Divider opacity={"10%"} />
-            <Flex gap={3.5} padding={4} direction={"column"}>
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  1X GOLD VALET
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  TECHNICAL POLISHMENT
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
+            <motion.div
+              key={currentPlanType}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.5 }}
+            >
+              <Flex gap={3.5} padding={4} direction={"column"}>
+                <Flex gap={2}>
+                  <Text
+                    letterSpacing={"2px"}
+                    textColor={"white"}
+                    fontWeight={"light"}
+                    fontSize={"2xs"}
+                  >
+                    1X GOLD VALET
+                  </Text>
+                  <FontAwesomeIcon
+                    opacity={"85%"}
+                    icon={faCheckCircle}
+                    color={"lightGreen"}
+                  />
+                </Flex>
+                <Divider opacity={"10%"} />
+                <Flex gap={2}>
+                  <Text
+                    letterSpacing={"2px"}
+                    textColor={"white"}
+                    fontWeight={"light"}
+                    fontSize={"2xs"}
+                  >
+                    TECHNICAL POLISHMENT
+                  </Text>
+                  <FontAwesomeIcon
+                    opacity={"85%"}
+                    icon={faCheckCircle}
+                    color={"lightGreen"}
+                  />
+                </Flex>
 
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  PAINT PROTECTION
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
+                <Divider opacity={"10%"} />
+                <Flex gap={2}>
+                  <Text
+                    letterSpacing={"2px"}
+                    textColor={"white"}
+                    fontWeight={"light"}
+                    fontSize={"2xs"}
+                  >
+                    PAINT PROTECTION
+                  </Text>
+                  <FontAwesomeIcon
+                    opacity={"85%"}
+                    icon={faCheckCircle}
+                    color={"lightGreen"}
+                  />
+                </Flex>
+                <Divider opacity={"10%"} />
+                <Flex gap={2}>
+                  <Text
+                    letterSpacing={"2px"}
+                    textColor={"white"}
+                    fontWeight={"light"}
+                    fontSize={"2xs"}
+                  >
+                    CERAMIC COATING ON ALLOYS
+                  </Text>
+                  <FontAwesomeIcon
+                    opacity={"85%"}
+                    icon={faCheckCircle}
+                    color={"lightGreen"}
+                  />
+                </Flex>
+                <Divider opacity={"10%"} />
+                <Flex gap={2}>
+                  <Text
+                    letterSpacing={"2px"}
+                    textColor={"white"}
+                    fontWeight={"light"}
+                    fontSize={"2xs"}
+                  >
+                    WATERPROOFING FABRICS 12 MONTHS
+                  </Text>
+                  <FontAwesomeIcon
+                    opacity={"85%"}
+                    icon={faCheckCircle}
+                    color={"lightGreen"}
+                  />
+                </Flex>
+                <Divider opacity={"10%"} />
+                <Flex gap={2}>
+                  <Text
+                    letterSpacing={"2px"}
+                    textColor={"white"}
+                    fontWeight={"light"}
+                    fontSize={"2xs"}
+                  >
+                    LEATHER PROTECTION 12 MONTHS
+                  </Text>
+                  <FontAwesomeIcon
+                    opacity={"85%"}
+                    icon={faCheckCircle}
+                    color={"lightGreen"}
+                  />
+                </Flex>
               </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  CERAMIC COATING ON ALLOYS
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  WATERPROOFING FABRICS
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-              <Divider opacity={"10%"} />
-              <Flex gap={2}>
-                <Text
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                  fontSize={"2xs"}
-                >
-                  LEATHER PROTECTION
-                </Text>
-                <FontAwesomeIcon
-                  opacity={"85%"}
-                  icon={faCheckCircle}
-                  color={"lightGreen"}
-                />
-              </Flex>
-            </Flex>
+            </motion.div>
           </Flex>
         </Flex>
       </Flex>
-    </Box>
+    </React.Fragment>
   );
 };
 

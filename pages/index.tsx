@@ -8,6 +8,7 @@ import {
   faLocationDot,
 } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from "react";
 import { useRef, useEffect } from "react";
 
 const Home = () => {
@@ -23,7 +24,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Box width={"full"} height={"inherit"} backgroundColor={"blackAlpha.900"}>
+    <React.Fragment>
       <video
         style={{
           position: "absolute",
@@ -278,7 +279,7 @@ const Home = () => {
           </Button>
         </Flex>
       </Flex>
-    </Box>
+    </React.Fragment>
   );
 };
 
