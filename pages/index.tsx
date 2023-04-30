@@ -23,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <Box width={"full"} height={"full"} backgroundColor={"blackAlpha.900"}>
+    <Box width={"full"} height={"inherit"} backgroundColor={"blackAlpha.900"}>
       <video
         style={{
           position: "absolute",
@@ -39,7 +39,7 @@ const Home = () => {
         loop
       />
       <Flex
-        padding={2}
+        padding={3}
         position={"relative"}
         backgroundColor={"blackAlpha.500"}
         align={"center"}
