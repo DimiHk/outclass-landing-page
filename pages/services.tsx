@@ -15,15 +15,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Image from "next/image";
-import Logo from "../public/outclass-logo-variant.gif";
-import WorkOne from "../public/work-one.webp";
-import WorkTwo from "../public/work-two.webp";
-import WorkThree from "../public/work-three.webp";
-import WorkFour from "../public/work-four.webp";
-import WorkFive from "../public/work-five.webp";
-import WorkSix from "../public/work-six.webp";
-import WorkTen from "../public/work-ten.webp";
-import WorkTwelve from "../public/work-twelve.webp";
 
 const Services = () => {
   const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
@@ -110,16 +101,16 @@ const Services = () => {
         position={"relative"}
         top={0}
       >
-        <Image
+        {/*  <Image
           style={{
             objectFit: "cover",
             cursor: "pointer",
           }}
           width={150}
           height={150}
-          src={Logo}
+          src={require("../public/outclass-logo-variant.gif")}
           alt="Dan Abramov"
-        />
+        /> */}
         <Flex gap={12} justify={"space-evenly"} marginRight={100}>
           <Text
             cursor={"pointer"}
@@ -1077,9 +1068,9 @@ const Services = () => {
                   cursor: "pointer",
                 }}
                 width={1080}
-                src={WorkOne}
+                src={"/images/work-one.webp"}
                 alt="work-one"
-                priority={true}
+                height={1080}
               />
               <Image
                 className="services-images"
@@ -1090,9 +1081,9 @@ const Services = () => {
                   height: "-webkit-fill-available",
                 }}
                 width={1080}
-                src={WorkTwo}
+                src={"/images/work-two.webp"}
                 alt="work-two"
-                priority={true}
+                height={1080}
               />
               <Image
                 className="services-images"
@@ -1102,9 +1093,9 @@ const Services = () => {
                   cursor: "pointer",
                 }}
                 width={1080}
-                src={WorkThree}
+                src={"/images/work-three.webp"}
                 alt="work-two"
-                priority={true}
+                height={1080}
               />
               <Image
                 className="services-images"
@@ -1114,9 +1105,9 @@ const Services = () => {
                   cursor: "pointer",
                 }}
                 width={1080}
-                src={WorkFour}
+                src={"/images/work-four.webp"}
                 alt="work-two"
-                priority={true}
+                height={1080}
               />
               <Image
                 className="services-images"
@@ -1126,9 +1117,9 @@ const Services = () => {
                   cursor: "pointer",
                 }}
                 width={1080}
-                src={WorkFive}
+                src={"/images/work-five.webp"}
                 alt="work-two"
-                priority={true}
+                height={1080}
               />
               <Image
                 className="services-images"
@@ -1138,22 +1129,9 @@ const Services = () => {
                   cursor: "pointer",
                 }}
                 width={1080}
-                src={WorkSix}
+                src={"/images/work-six.webp"}
                 alt="work-two"
-                priority={true}
-              />
-              <Image
-                className="services-images"
-                style={{
-                  borderRadius: "0.25rem",
-                  objectFit: "cover",
-                  cursor: "pointer",
-                  height: "-webkit-fill-available",
-                }}
-                width={1080}
-                src={WorkTen}
-                alt="work-two"
-                priority={true}
+                height={1080}
               />
               <Image
                 className="services-images"
@@ -1164,9 +1142,22 @@ const Services = () => {
                   height: "-webkit-fill-available",
                 }}
                 width={1080}
-                src={WorkTwelve}
+                src={"/images/work-ten.webp"}
                 alt="work-two"
-                priority={true}
+                height={1080}
+              />
+              <Image
+                className="services-images"
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                  height: "-webkit-fill-available",
+                }}
+                width={1080}
+                src={"/images/work-twelve.webp"}
+                alt="work-two"
+                height={1080}
               />
             </SimpleGrid>
           </Flex>

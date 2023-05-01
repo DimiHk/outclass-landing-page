@@ -22,11 +22,20 @@
     "@fortawesome/pro-thin-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "framer-motion": "^10.12.4",
+    "image-trace-loader": "^1.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^10.0.1",
+    "jimp": "^0.22.7",
+    "lqip-loader": "^2.2.1",
     "next": "13.3.1",
     "next-optimized-images": "^2.6.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.32.1"
+    "responsive-loader": "^3.1.2",
+    "svg-sprite-loader": "^6.0.11",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "18.16.2",
