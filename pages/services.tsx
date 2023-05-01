@@ -17,7 +17,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "../public/outclass-logo-variant.gif";
 import WorkOne from "../public/work-one.webp";
-import WorkTwo from "../public/work-two.jpg";
+import WorkTwo from "../public/work-two.webp";
 import WorkThree from "../public/work-three.webp";
 import WorkFour from "../public/work-four.webp";
 import WorkFive from "../public/work-five.webp";
@@ -89,11 +89,11 @@ const Services = () => {
         <Flex align={"center"} justify={"center"} gap={2}>
           <Button
             textColor={"gray.900"}
-            backgroundColor={"whiteAlpha.650"}
+            backgroundColor={"whiteAlpha.500"}
             boxShadow={"dark-lg"}
             size={"sm"}
             _hover={{
-              backgroundColor: "blackAlpha.650",
+              backgroundColor: "blackAlpha.500",
               color: "white",
             }}
           >
@@ -171,7 +171,7 @@ const Services = () => {
           </Text>
           <Button
             textColor={"white"}
-            backgroundColor={"whiteAlpha.650"}
+            backgroundColor={"whiteAlpha.500"}
             boxShadow={"dark-lg"}
             _hover={{
               backgroundColor: "whiteAlpha.100",
@@ -183,7 +183,7 @@ const Services = () => {
               borderRadius={"base"}
               right={"-70px"}
               bottom={7}
-              backgroundColor={"green.1080"}
+              backgroundColor={"green.200"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
               paddingTop={"6px"}
@@ -275,7 +275,7 @@ const Services = () => {
             minWidth={"sm"}
             direction={"column"}
             cursor={"pointer"}
-            backgroundColor={"whiteAlpha.1080"}
+            backgroundColor={"whiteAlpha.200"}
             _hover={{ backgroundColor: "whiteAlpha.100" }}
             padding={2}
             paddingRight={6}
@@ -549,14 +549,14 @@ const Services = () => {
               borderRadius={"base"}
               top={-4}
               right={145}
-              backgroundColor={"green.1080"}
+              backgroundColor={"green.100"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
               paddingTop={"6px"}
               paddingBottom={"6px"}
               letterSpacing={"2px"}
               fontSize={"2xs"}
-              textColor={"green.900"}
+              textColor={"green.800"}
               fontWeight={"semibold"}
               shadow={"dark-lg"}
             >
@@ -565,7 +565,7 @@ const Services = () => {
             <Flex
               direction={"column"}
               cursor={"pointer"}
-              backgroundColor={"whiteAlpha.1080"}
+              backgroundColor={"whiteAlpha.200"}
               _hover={{ backgroundColor: "whiteAlpha.100" }}
               padding={2}
               paddingRight={6}
@@ -865,7 +865,7 @@ const Services = () => {
             minWidth={"sm"}
             direction={"column"}
             cursor={"pointer"}
-            backgroundColor={"whiteAlpha.1080"}
+            backgroundColor={"whiteAlpha.200"}
             _hover={{ backgroundColor: "whiteAlpha.100" }}
             padding={2}
             paddingRight={6}
@@ -879,14 +879,14 @@ const Services = () => {
               borderRadius={"base"}
               top={-4}
               right={120}
-              backgroundColor={"cyan.1080"}
+              backgroundColor={"cyan.100"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
               paddingTop={"6px"}
               paddingBottom={"6px"}
               letterSpacing={"2px"}
               fontSize={"2xs"}
-              textColor={"cyan.900"}
+              textColor={"cyan.800"}
               fontWeight={"semibold"}
               shadow={"dark-lg"}
             >
