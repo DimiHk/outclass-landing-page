@@ -35,7 +35,7 @@ const Home = () => {
           aspectRatio: "auto",
         }}
         ref={videoRef}
-        src="video.mp4"
+        src="/images/video.mp4"
         autoPlay
         loop
       />
@@ -121,7 +121,7 @@ const Home = () => {
           cursor={"pointer"}
           objectFit={"cover"}
           height={"64px"}
-          src="outclass-logo-variant.gif"
+          src="/images/outclass-logo-variant.gif"
           alt="Dan Abramov"
         />
         <Flex gap={12} justify={"space-evenly"} marginRight={100}>
