@@ -1079,6 +1079,7 @@ const Services = () => {
                 width={1080}
                 src={WorkOne}
                 alt="work-one"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1091,6 +1092,7 @@ const Services = () => {
                 width={1080}
                 src={WorkTwo}
                 alt="work-two"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1102,6 +1104,7 @@ const Services = () => {
                 width={1080}
                 src={WorkThree}
                 alt="work-two"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1113,6 +1116,7 @@ const Services = () => {
                 width={1080}
                 src={WorkFour}
                 alt="work-two"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1124,6 +1128,7 @@ const Services = () => {
                 width={1080}
                 src={WorkFive}
                 alt="work-two"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1135,6 +1140,7 @@ const Services = () => {
                 width={1080}
                 src={WorkSix}
                 alt="work-two"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1147,6 +1153,7 @@ const Services = () => {
                 width={1080}
                 src={WorkTen}
                 alt="work-two"
+                priority={true}
               />
               <Image
                 className="services-images"
@@ -1159,6 +1166,7 @@ const Services = () => {
                 width={1080}
                 src={WorkTwelve}
                 alt="work-two"
+                priority={true}
               />
             </SimpleGrid>
           </Flex>
