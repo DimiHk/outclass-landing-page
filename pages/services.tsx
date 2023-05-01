@@ -36,7 +36,7 @@ const Services = () => {
     <React.Fragment>
       <Flex
         padding={3}
-        backgroundColor={"whiteAlpha.200"}
+        backgroundColor={"whiteAlpha.1080"}
         align={"center"}
         justify={"center"}
         gap={8}
@@ -183,7 +183,7 @@ const Services = () => {
               borderRadius={"base"}
               right={"-70px"}
               bottom={7}
-              backgroundColor={"green.200"}
+              backgroundColor={"green.1080"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
               paddingTop={"6px"}
@@ -275,7 +275,7 @@ const Services = () => {
             minWidth={"sm"}
             direction={"column"}
             cursor={"pointer"}
-            backgroundColor={"whiteAlpha.200"}
+            backgroundColor={"whiteAlpha.1080"}
             _hover={{ backgroundColor: "whiteAlpha.100" }}
             padding={2}
             paddingRight={6}
@@ -549,7 +549,7 @@ const Services = () => {
               borderRadius={"base"}
               top={-4}
               right={145}
-              backgroundColor={"green.200"}
+              backgroundColor={"green.1080"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
               paddingTop={"6px"}
@@ -565,7 +565,7 @@ const Services = () => {
             <Flex
               direction={"column"}
               cursor={"pointer"}
-              backgroundColor={"whiteAlpha.200"}
+              backgroundColor={"whiteAlpha.1080"}
               _hover={{ backgroundColor: "whiteAlpha.100" }}
               padding={2}
               paddingRight={6}
@@ -865,7 +865,7 @@ const Services = () => {
             minWidth={"sm"}
             direction={"column"}
             cursor={"pointer"}
-            backgroundColor={"whiteAlpha.200"}
+            backgroundColor={"whiteAlpha.1080"}
             _hover={{ backgroundColor: "whiteAlpha.100" }}
             padding={2}
             paddingRight={6}
@@ -879,7 +879,7 @@ const Services = () => {
               borderRadius={"base"}
               top={-4}
               right={120}
-              backgroundColor={"cyan.200"}
+              backgroundColor={"cyan.1080"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
               paddingTop={"6px"}
@@ -1076,7 +1076,7 @@ const Services = () => {
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={650}
+                width={1080}
                 src={WorkOne}
                 alt="work-one"
               />
@@ -1088,7 +1088,7 @@ const Services = () => {
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={650}
+                width={1080}
                 src={WorkTwo}
                 alt="work-two"
               />
@@ -1099,7 +1099,7 @@ const Services = () => {
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={650}
+                width={1080}
                 src={WorkThree}
                 alt="work-two"
               />
@@ -1110,7 +1110,7 @@ const Services = () => {
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={650}
+                width={1080}
                 src={WorkFour}
                 alt="work-two"
               />
@@ -1121,7 +1121,7 @@ const Services = () => {
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={650}
+                width={1080}
                 src={WorkFive}
                 alt="work-two"
               />
@@ -1132,7 +1132,7 @@ const Services = () => {
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={650}
+                width={1080}
                 src={WorkSix}
                 alt="work-two"
               />
@@ -1144,7 +1144,7 @@ const Services = () => {
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={650}
+                width={1080}
                 src={WorkTen}
                 alt="work-two"
               />
@@ -1156,7 +1156,7 @@ const Services = () => {
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={650}
+                width={1080}
                 src={WorkTwelve}
                 alt="work-two"
               />
