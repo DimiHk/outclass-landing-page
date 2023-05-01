@@ -1,10 +1,7 @@
-"use client";
-
 import {
   Button,
   Flex,
   Text,
-  Image,
   Divider,
   Badge,
   Select,
@@ -17,6 +14,16 @@ import { faCheckCircle, faCircleXmark } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
+import Image from "next/image";
+import Logo from "../public/outclass-logo-variant.gif";
+import WorkOne from "../public/work-one.webp";
+import WorkTwo from "../public/work-two.jpg";
+import WorkThree from "../public/work-three.webp";
+import WorkFour from "../public/work-four.webp";
+import WorkFive from "../public/work-five.webp";
+import WorkSix from "../public/work-six.webp";
+import WorkTen from "../public/work-ten.webp";
+import WorkTwelve from "../public/work-one.webp";
 
 const Services = () => {
   const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
@@ -104,10 +111,13 @@ const Services = () => {
         top={0}
       >
         <Image
-          cursor={"pointer"}
-          objectFit={"cover"}
-          height={"64px"}
-          src="outclass-logo-variant.gif"
+          style={{
+            objectFit: "cover",
+            cursor: "pointer",
+          }}
+          width={150}
+          height={150}
+          src={Logo}
           alt="Dan Abramov"
         />
         <Flex gap={12} justify={"space-evenly"} marginRight={100}>
@@ -1052,103 +1062,102 @@ const Services = () => {
                 <span style={{ color: "#68D391" }}>{" TEAM "}</span>!
               </Text>
             </Flex>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.5 }}
+
+            <SimpleGrid
+              marginTop={8}
+              columns={4}
+              spacing={12}
+              position={"relative"}
             >
-              <SimpleGrid marginTop={8} columns={4} spacing={12}>
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  borderRadius={"base"}
-                  src="work-one.jpg"
-                  objectFit={"cover"}
-                  height={"auto"}
-                  width={"auto"}
-                  alt="Dan Abramov"
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  src="work-two.jpg"
-                  objectFit={"cover"}
-                  alt="Dan Abramov"
-                  borderRadius={"base"}
-                  height={"full"}
-                  width={"auto"}
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  src="work-three.jpg"
-                  objectFit={"cover"}
-                  alt="Dan Abramov"
-                  borderRadius={"base"}
-                  height={"auto"}
-                  width={"auto"}
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  src="work-four.jpg"
-                  objectFit={"cover"}
-                  alt="Dan Abramov"
-                  borderRadius={"base"}
-                  height={"auto"}
-                  width={"auto"}
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  borderRadius={"base"}
-                  src="work-five.jpg"
-                  objectFit={"cover"}
-                  height={"auto"}
-                  width={"auto"}
-                  alt="Dan Abramov"
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  src="work-six.jpg"
-                  objectFit={"cover"}
-                  alt="Dan Abramov"
-                  borderRadius={"base"}
-                  height={"full"}
-                  width={"auto"}
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  src="work-ten.jpg"
-                  objectFit={"cover"}
-                  alt="Dan Abramov"
-                  borderRadius={"base"}
-                  height={"full"}
-                  width={"auto"}
-                  shadow={"dark-lg"}
-                />
-                <Image
-                  transition="transform 0.1s ease-in"
-                  _hover={{ transform: "scale(1.05)", cursor: "pointer" }}
-                  src="work-twelve.jpg"
-                  objectFit={"cover"}
-                  alt="Dan Abramov"
-                  borderRadius={"base"}
-                  height={"full"}
-                  width={"auto"}
-                  shadow={"dark-lg"}
-                />
-              </SimpleGrid>
-            </motion.div>
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                }}
+                width={420}
+                height={420}
+                src={WorkOne}
+                alt="work-one"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                  height: "-webkit-fill-available",
+                }}
+                width={420}
+                src={WorkTwo}
+                alt="work-two"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                }}
+                width={420}
+                height={420}
+                src={WorkThree}
+                alt="work-two"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                }}
+                width={420}
+                height={420}
+                src={WorkFour}
+                alt="work-two"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                }}
+                width={420}
+                height={420}
+                src={WorkFive}
+                alt="work-two"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                }}
+                width={420}
+                height={420}
+                src={WorkSix}
+                alt="work-two"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                  height: "-webkit-fill-available",
+                }}
+                width={420}
+                src={WorkTen}
+                alt="work-two"
+              />
+              <Image
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                }}
+                width={420}
+                height={420}
+                src={WorkTwelve}
+                alt="work-two"
+              />
+            </SimpleGrid>
           </Flex>
         </Flex>
       </Flex>
