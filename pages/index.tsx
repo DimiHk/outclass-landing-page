@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/pro-regular-svg-icons";
@@ -35,7 +35,7 @@ const Home = () => {
           aspectRatio: "auto",
         }}
         ref={videoRef}
-        src="/images/video.mp4"
+        src="../public/video.mp4"
         autoPlay
         loop
       />
@@ -121,7 +121,7 @@ const Home = () => {
           cursor={"pointer"}
           objectFit={"cover"}
           height={"64px"}
-          src="/images/outclass-logo-variant.gif"
+          src="../public/outclass-logo-variant.gif"
           alt="Dan Abramov"
         />
         <Flex gap={12} justify={"space-evenly"} marginRight={100}>

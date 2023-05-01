@@ -15,6 +15,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import Image from "next/image";
+import Logo from "../public/outclass-logo-variant.gif";
+import ImageOne from "../public/work-one.webp";
+import ImageTwo from "../public/work-two.webp";
+import ImageThre from "../public/work-three.webp";
+import ImageFour from "../public/work-four.webp";
+import ImageFive from "../public/work-five.webp";
+import ImageSix from "../public/work-six.webp";
+import ImageTen from "../public/work-ten.webp";
+import ImageTwelve from "../public/work-twelve.webp";
 
 const Services = () => {
   const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
@@ -101,16 +110,16 @@ const Services = () => {
         position={"relative"}
         top={0}
       >
-        {/*  <Image
+        <Image
           style={{
             objectFit: "cover",
             cursor: "pointer",
           }}
           width={150}
           height={150}
-          src={require("../public/outclass-logo-variant.gif")}
+          src={Logo}
           alt="Dan Abramov"
-        /> */}
+        />
         <Flex gap={12} justify={"space-evenly"} marginRight={100}>
           <Text
             cursor={"pointer"}
@@ -1061,18 +1070,18 @@ const Services = () => {
               position={"relative"}
             >
               <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={1080}
-                src={"/images/work-one.webp"}
+                src={ImageOne}
                 alt="work-one"
-                height={1080}
               />
               <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
@@ -1080,73 +1089,55 @@ const Services = () => {
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={1080}
-                src={"/images/work-two.webp"}
+                src={ImageTwo}
                 alt="work-two"
-                height={1080}
               />
               <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={1080}
-                src={"/images/work-three.webp"}
+                src={ImageThre}
                 alt="work-two"
-                height={1080}
               />
               <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={1080}
-                src={"/images/work-four.webp"}
+                src={ImageFour}
                 alt="work-two"
-                height={1080}
               />
               <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={1080}
-                src={"/images/work-five.webp"}
+                src={ImageFive}
                 alt="work-two"
-                height={1080}
               />
               <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={1080}
-                src={"/images/work-six.webp"}
+                src={ImageSix}
                 alt="work-two"
-                height={1080}
               />
               <Image
-                className="services-images"
-                style={{
-                  borderRadius: "0.25rem",
-                  objectFit: "cover",
-                  cursor: "pointer",
-                  height: "-webkit-fill-available",
-                }}
-                width={1080}
-                src={"/images/work-ten.webp"}
-                alt="work-two"
-                height={1080}
-              />
-              <Image
+                quality={75}
                 className="services-images"
                 style={{
                   borderRadius: "0.25rem",
@@ -1154,10 +1145,20 @@ const Services = () => {
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={1080}
-                src={"/images/work-twelve.webp"}
+                src={ImageTen}
                 alt="work-two"
-                height={1080}
+              />
+              <Image
+                quality={75}
+                className="services-images"
+                style={{
+                  borderRadius: "0.25rem",
+                  objectFit: "cover",
+                  cursor: "pointer",
+                  height: "-webkit-fill-available",
+                }}
+                src={ImageTwelve}
+                alt="work-two"
               />
             </SimpleGrid>
           </Flex>
