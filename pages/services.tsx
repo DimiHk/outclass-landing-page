@@ -23,7 +23,7 @@ import WorkFour from "../public/work-four.webp";
 import WorkFive from "../public/work-five.webp";
 import WorkSix from "../public/work-six.webp";
 import WorkTen from "../public/work-ten.webp";
-import WorkTwelve from "../public/work-one.webp";
+import WorkTwelve from "../public/work-twelve.webp";
 
 const Services = () => {
   const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
@@ -89,11 +89,11 @@ const Services = () => {
         <Flex align={"center"} justify={"center"} gap={2}>
           <Button
             textColor={"gray.900"}
-            backgroundColor={"whiteAlpha.500"}
+            backgroundColor={"whiteAlpha.650"}
             boxShadow={"dark-lg"}
             size={"sm"}
             _hover={{
-              backgroundColor: "blackAlpha.500",
+              backgroundColor: "blackAlpha.650",
               color: "white",
             }}
           >
@@ -171,7 +171,7 @@ const Services = () => {
           </Text>
           <Button
             textColor={"white"}
-            backgroundColor={"whiteAlpha.500"}
+            backgroundColor={"whiteAlpha.650"}
             boxShadow={"dark-lg"}
             _hover={{
               backgroundColor: "whiteAlpha.100",
@@ -909,7 +909,7 @@ const Services = () => {
                 textColor={"green.300"}
                 fontWeight={"bold"}
               >
-                500€ / PACK
+                650€ / PACK
               </Text>
             </Flex>
             <Divider opacity={"10%"} />
@@ -1070,90 +1070,93 @@ const Services = () => {
               position={"relative"}
             >
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={420}
-                height={420}
+                width={650}
                 src={WorkOne}
                 alt="work-one"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={420}
+                width={650}
                 src={WorkTwo}
                 alt="work-two"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={420}
-                height={420}
+                width={650}
                 src={WorkThree}
                 alt="work-two"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={420}
-                height={420}
+                width={650}
                 src={WorkFour}
                 alt="work-two"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={420}
-                height={420}
+                width={650}
                 src={WorkFive}
                 alt="work-two"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                 }}
-                width={420}
-                height={420}
+                width={650}
                 src={WorkSix}
                 alt="work-two"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
                   height: "-webkit-fill-available",
                 }}
-                width={420}
+                width={650}
                 src={WorkTen}
                 alt="work-two"
               />
               <Image
+                className="services-images"
                 style={{
                   borderRadius: "0.25rem",
                   objectFit: "cover",
                   cursor: "pointer",
+                  height: "-webkit-fill-available",
                 }}
-                width={420}
-                height={420}
+                width={650}
                 src={WorkTwelve}
                 alt="work-two"
               />

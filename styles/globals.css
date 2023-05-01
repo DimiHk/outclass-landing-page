@@ -18,3 +18,11 @@ div#__next > div {
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.64);
 }
+
+.services-images {
+  transition: all 0.2s ease-in-out;
+}
+
+.services-images:hover {
+  transform: scale(1.05);
+}
