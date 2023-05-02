@@ -1,7 +1,12 @@
 import { AppProps } from "next/app";
 import { ChakraProvider, Container, extendTheme } from "@chakra-ui/react";
-import "../styles/globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+
 import "@fontsource/open-sans/400.css";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "../styles/globals.css";
+
+config.autoAddCss = true;
 
 const theme = extendTheme({
   fonts: {

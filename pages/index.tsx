@@ -1,5 +1,4 @@
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/pro-regular-svg-icons";
 import {
@@ -10,6 +9,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useRef, useEffect } from "react";
+import Logo from "../public/outclass-logo-variant.gif";
+import Image from "next/image";
 
 const Home = () => {
   const videoRef = useRef<HTMLVideoElement>();
@@ -35,7 +36,7 @@ const Home = () => {
           aspectRatio: "auto",
         }}
         ref={videoRef}
-        src="../public/video.mp4"
+        src="video.mp4"
         autoPlay
         loop
       />
@@ -118,10 +119,13 @@ const Home = () => {
         marginTop={2}
       >
         <Image
-          cursor={"pointer"}
-          objectFit={"cover"}
-          height={"64px"}
-          src="../public/outclass-logo-variant.gif"
+          style={{
+            objectFit: "cover",
+            cursor: "pointer",
+          }}
+          width={150}
+          height={150}
+          src={Logo}
           alt="Dan Abramov"
         />
         <Flex gap={12} justify={"space-evenly"} marginRight={100}>

@@ -1079,7 +1079,7 @@ const Services = () => {
                 }}
                 src={ImageOne}
                 alt="work-one"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1092,7 +1092,7 @@ const Services = () => {
                 }}
                 src={ImageTwo}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1104,7 +1104,7 @@ const Services = () => {
                 }}
                 src={ImageThre}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1116,7 +1116,7 @@ const Services = () => {
                 }}
                 src={ImageFour}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1128,7 +1128,7 @@ const Services = () => {
                 }}
                 src={ImageFive}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1140,7 +1140,7 @@ const Services = () => {
                 }}
                 src={ImageSix}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1153,7 +1153,7 @@ const Services = () => {
                 }}
                 src={ImageTen}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
               <Image
                 quality={75}
@@ -1166,7 +1166,7 @@ const Services = () => {
                 }}
                 src={ImageTwelve}
                 alt="work-two"
-                sizes="100vw"
+                sizes="50vw"
               />
             </SimpleGrid>
           </Flex>
