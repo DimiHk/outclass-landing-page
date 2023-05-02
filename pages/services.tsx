@@ -64,6 +64,7 @@ const Services = () => {
             (+351) 939 235 577
           </Text>
         </Flex>
+
         <Flex align={"center"} justify={"center"} gap={2}>
           <FontAwesomeIcon icon={faInstagram} color="white" size="lg" />
           <Text
