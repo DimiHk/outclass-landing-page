@@ -1,6 +1,6 @@
 import { Flex, Divider } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { withLandingLayout } from "./layouts/LandingPageLayout";
+import withLandingLayout from "./layouts/LandingPageLayout";
 import OutclassValetsHeader from "./features/services/OutclassValetsHeader";
 import OutclassSubHeader from "./features/services/OutclassSubHeader";
 import SilverValet from "./features/services/SilverValet";

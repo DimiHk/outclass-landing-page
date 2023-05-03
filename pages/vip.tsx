@@ -1,5 +1,5 @@
 import React from "react";
-import { withLandingLayout } from "./layouts/LandingPageLayout";
+import withLandingLayout from "./layouts/LandingPageLayout";
 import { AspectRatio, Center, Grid, GridItem } from "@chakra-ui/react";
 import VipHeader from "./features/vip/VipHeader";
 import EliteSubscription from "./features/vip/EliteSubscription";

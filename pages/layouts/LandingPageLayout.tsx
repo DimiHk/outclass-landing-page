@@ -22,7 +22,7 @@ const Layout = ({ children }: { children: any }) => {
   );
 };
 
-export const withLandingLayout = <P extends object>(
+const withLandingLayout = <P extends object>(
   WrappedComponent: ComponentType<P>
 ) => {
   const withLandingLayout: React.FC<P> = (props) => (
@@ -32,3 +32,5 @@ export const withLandingLayout = <P extends object>(
   );
   return withLandingLayout;
 };
+
+export default withLandingLayout;
