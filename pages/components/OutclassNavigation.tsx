@@ -45,7 +45,7 @@ const OutclassNavigation = () => {
           borderRadius={"base"}
           _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
         >
-          DETAILING
+          VALETS
         </Text>
         <Text
           cursor={"pointer"}
@@ -69,7 +69,7 @@ const OutclassNavigation = () => {
           borderRadius={"base"}
           _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
         >
-          ABOUT
+          ABOUT US
         </Text>
         <Button
           textColor={"white"}
