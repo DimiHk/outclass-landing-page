@@ -11,6 +11,7 @@ import React from "react";
 import { useRef, useEffect } from "react";
 import Logo from "../public/outclass-logo-variant.gif";
 import Image from "next/image";
+import Link from 'next/link';
 
 const Home = () => {
   const videoRef = useRef<HTMLVideoElement>();
@@ -57,10 +58,10 @@ const Home = () => {
             fontWeight={"light"}
             fontSize={"xs"}
           >
-            (+351) 962 199 831
+            <a href={`tel:(+351) 939 235 577`}>(+351) 962 199 831</a>
           </Text>
         </Flex>
-        <Flex align={"center"} justify={"center"} gap={2}>
+        {/* <Flex align={"center"} justify={"center"} gap={2}>
           <FontAwesomeIcon icon={faWhatsapp} color="white" size="xl" />
           <Text
             letterSpacing={"2px"}
@@ -70,7 +71,7 @@ const Home = () => {
           >
             (+351) 939 235 577
           </Text>
-        </Flex>
+        </Flex> */}
         <Flex align={"center"} justify={"center"} gap={2}>
           <FontAwesomeIcon icon={faInstagram} color="white" size="lg" />
           <Text
@@ -79,7 +80,7 @@ const Home = () => {
             fontWeight={"light"}
             fontSize={"xs"}
           >
-            @outclasscardetail
+            <a href="https://www.instagram.com/outclasscardetail/">@outclasscardetail</a>
           </Text>
         </Flex>
 
@@ -91,7 +92,7 @@ const Home = () => {
             fontWeight={"light"}
             fontSize={"xs"}
           >
-            geral@outclasscardetail.com
+            <a href={`mailto:geral@outclasscardetail.com`}>geral@outclasscardetail.com</a>
           </Text>
         </Flex>
         <Flex align={"center"} justify={"center"} gap={2}>
@@ -106,7 +107,7 @@ const Home = () => {
             }}
           >
             <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-              WHERE TO FIND US <FontAwesomeIcon icon={faLocationDot} />
+              <a href="https://goo.gl/maps/VaymPpbM3MLp7T4b9?coh=178572&entry=tt">WHERE TO FIND US <FontAwesomeIcon icon={faLocationDot} /></a> 
             </Text>
           </Button>
         </Flex>

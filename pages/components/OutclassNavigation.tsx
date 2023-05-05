@@ -2,6 +2,7 @@ import { Flex, Button, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import Logo from "../../public/outclass-logo-variant.gif";
+import Link from 'next/link';
 
 const OutclassNavigation = () => {
   return (
@@ -33,7 +34,9 @@ const OutclassNavigation = () => {
           borderRadius={"base"}
           _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
         >
-          HOME
+          <Link href={"/"} prefetch={true}>
+            HOME 
+          </Link>
         </Text>
         <Text
           cursor={"pointer"}
