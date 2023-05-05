@@ -1,28 +1,20 @@
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faAt } from "@fortawesome/pro-regular-svg-icons";
-import {
-  faArrowRight,
-  faDollarSign,
-  faLocationDot,
-} from "@fortawesome/pro-solid-svg-icons";
+import { faArrowRight, faDollarSign } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useRef, useEffect } from "react";
-import Logo from "../public/outclass-logo-variant.gif";
-import Image from "next/image";
-import Link from 'next/link';
+import Link from "next/link";
+import OutclassNavigation from "./components/OutclassNavigation";
+import OutclassInfoHeader from "./components/OutclassInfoHeader";
 
 const Home = () => {
   const videoRef = useRef<HTMLVideoElement>();
 
   useEffect(() => {
-    setTimeout(() => {
-      if (videoRef!) {
-        videoRef.current.muted = true;
-        videoRef.current.play();
-      }
-    }, 1000);
+    if (videoRef!) {
+      videoRef.current.muted = true;
+      videoRef.current.play();
+    }
   }, []);
 
   return (
@@ -41,183 +33,8 @@ const Home = () => {
         autoPlay
         loop
       />
-      <Flex
-        padding={3}
-        position={"relative"}
-        backgroundColor={"blackAlpha.500"}
-        align={"center"}
-        justify={"center"}
-        gap={8}
-        shadow={"md"}
-      >
-        <Flex align={"center"} justify={"center"} gap={2}>
-          <FontAwesomeIcon icon={faWhatsapp} color="white" size="xl" />
-          <Text
-            letterSpacing={"2px"}
-            textColor={"white"}
-            fontWeight={"light"}
-            fontSize={"xs"}
-          >
-            <a href={`tel:(+351) 939 235 577`}>(+351) 962 199 831</a>
-          </Text>
-        </Flex>
-        {/* <Flex align={"center"} justify={"center"} gap={2}>
-          <FontAwesomeIcon icon={faWhatsapp} color="white" size="xl" />
-          <Text
-            letterSpacing={"2px"}
-            textColor={"white"}
-            fontWeight={"light"}
-            fontSize={"xs"}
-          >
-            (+351) 939 235 577
-          </Text>
-        </Flex> */}
-        <Flex align={"center"} justify={"center"} gap={2}>
-          <FontAwesomeIcon icon={faInstagram} color="white" size="lg" />
-          <Text
-            letterSpacing={"2px"}
-            textColor={"white"}
-            fontWeight={"light"}
-            fontSize={"xs"}
-          >
-            <a href="https://www.instagram.com/outclasscardetail/">@outclasscardetail</a>
-          </Text>
-        </Flex>
-
-        <Flex align={"center"} justify={"center"} gap={2}>
-          <FontAwesomeIcon icon={faAt} color="white" size="lg" />
-          <Text
-            letterSpacing={"2px"}
-            textColor={"white"}
-            fontWeight={"light"}
-            fontSize={"xs"}
-          >
-            <a href={`mailto:geral@outclasscardetail.com`}>geral@outclasscardetail.com</a>
-          </Text>
-        </Flex>
-        <Flex align={"center"} justify={"center"} gap={2}>
-          <Button
-            textColor={"gray.900"}
-            backgroundColor={"whiteAlpha.500"}
-            boxShadow={"dark-lg"}
-            size={"sm"}
-            _hover={{
-              backgroundColor: "blackAlpha.500",
-              color: "white",
-            }}
-          >
-            <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-              <a href="https://goo.gl/maps/VaymPpbM3MLp7T4b9?coh=178572&entry=tt">WHERE TO FIND US <FontAwesomeIcon icon={faLocationDot} /></a> 
-            </Text>
-          </Button>
-        </Flex>
-      </Flex>
-      <Flex
-        position={"relative"}
-        justify={"space-between"}
-        align={"center"}
-        padding={2}
-        marginTop={2}
-      >
-        <Image
-          style={{
-            objectFit: "cover",
-            cursor: "pointer",
-          }}
-          width={150}
-          height={150}
-          src={Logo}
-          alt="Dan Abramov"
-        />
-        <Flex gap={12} justify={"space-evenly"} marginRight={100}>
-          <Text
-            cursor={"pointer"}
-            fontWeight={"light"}
-            fontSize={"smaller"}
-            color={"white"}
-            padding={"0.5rem"}
-            letterSpacing={"2px"}
-            borderRadius={"base"}
-            _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
-          >
-            <Link href={"/"} prefetch={false}>
-              HOME
-            </Link>
-          </Text>
-          <Text
-            cursor={"pointer"}
-            fontWeight={"light"}
-            fontSize={"smaller"}
-            color={"white"}
-            padding={"0.5rem"}
-            letterSpacing={"2px"}
-            borderRadius={"base"}
-            _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
-          >
-            <Link href={"/services"} prefetch={false}>
-              VALETS
-            </Link>
-          </Text>
-          <Text
-            cursor={"pointer"}
-            fontWeight={"light"}
-            fontSize={"smaller"}
-            color={"white"}
-            padding={"0.5rem"}
-            letterSpacing={"2px"}
-            borderRadius={"base"}
-            _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
-          >
-            PPF
-          </Text>
-          <Text
-            cursor={"pointer"}
-            fontWeight={"light"}
-            fontSize={"smaller"}
-            color={"white"}
-            padding={"0.5rem"}
-            letterSpacing={"2px"}
-            borderRadius={"base"}
-            _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
-          >
-            <Link href={"/about"} prefetch={false}>
-              ABOUT US
-            </Link>
-          </Text>
-          <Button
-            textColor={"white"}
-            backgroundColor={"whiteAlpha.500"}
-            boxShadow={"dark-lg"}
-            _hover={{
-              backgroundColor: "whiteAlpha.100",
-              color: "white",
-            }}
-          >
-            <Text
-              position={"absolute"}
-              borderRadius={"base"}
-              right={"-70px"}
-              bottom={7}
-              backgroundColor={"green.200"}
-              paddingRight={"12px"}
-              paddingLeft={"12px"}
-              paddingTop={"6px"}
-              paddingBottom={"6px"}
-              letterSpacing={"2px"}
-              fontSize={"2xs"}
-              textColor={"green.900"}
-              fontWeight={"light"}
-            >
-              JOIN US!
-            </Text>
-            <Text fontWeight={"light"} letterSpacing={"2px"} fontSize={"smaller"}>
-              <Link href={"/vip"} prefetch={false}>
-                VIP CLUB
-              </Link>
-            </Text>
-          </Button>
-        </Flex>
-      </Flex>
+      <OutclassInfoHeader />
+      <OutclassNavigation />
       <Flex
         direction={"column"}
         marginTop={140}
@@ -260,32 +77,36 @@ const Home = () => {
           HIGHEST QUALITY CAR CLEANING AND DETAILING SERVICES.
         </Text>
         <Flex marginTop={2} gap={4}>
-          <Button
-            textColor={"gray.900"}
-            backgroundColor={"whiteAlpha.500"}
-            boxShadow={"dark-lg"}
-            _hover={{
-              backgroundColor: "blackAlpha.500",
-              color: "white",
-            }}
-          >
-            <Text letterSpacing={"2px"} fontWeight={"semibold"} fontSize={"xs"}>
-              JOIN VIP CLUBE <FontAwesomeIcon icon={faDollarSign} />
-            </Text>
-          </Button>
-          <Button
-            textColor={"gray.900"}
-            backgroundColor={"whiteAlpha.500"}
-            boxShadow={"dark-lg"}
-            _hover={{
-              backgroundColor: "blackAlpha.500",
-              color: "white",
-            }}
-          >
-            <Text letterSpacing={"2px"} fontWeight={"semibold"} fontSize={"xs"}>
-              CHECK OUR SERVICES <FontAwesomeIcon icon={faArrowRight} />
-            </Text>
-          </Button>
+          <Link href={"/vip"} prefetch={false}>
+            <Button
+              textColor={"gray.900"}
+              backgroundColor={"whiteAlpha.500"}
+              boxShadow={"dark-lg"}
+              _hover={{
+                backgroundColor: "blackAlpha.500",
+                color: "white",
+              }}
+            >
+              <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
+                JOIN VIP CLUBE <FontAwesomeIcon icon={faDollarSign} />
+              </Text>
+            </Button>
+          </Link>
+          <Link href={"/valets"} prefetch={false}>
+            <Button
+              textColor={"gray.900"}
+              backgroundColor={"whiteAlpha.500"}
+              boxShadow={"dark-lg"}
+              _hover={{
+                backgroundColor: "blackAlpha.500",
+                color: "white",
+              }}
+            >
+              <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
+                CHECK OUR SERVICES <FontAwesomeIcon icon={faArrowRight} />
+              </Text>
+            </Button>
+          </Link>
         </Flex>
       </Flex>
     </React.Fragment>
