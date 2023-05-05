@@ -34,8 +34,8 @@ const OutclassNavigation = () => {
           borderRadius={"base"}
           _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
         >
-          <Link href={"/"} prefetch={true}>
-            HOME 
+          <Link href={"/"} prefetch={false}>
+            HOME
           </Link>
         </Text>
         <Text
@@ -48,7 +48,9 @@ const OutclassNavigation = () => {
           borderRadius={"base"}
           _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
         >
-          VALETS
+          <Link href={"/services"} prefetch={false}>
+            VALETS
+          </Link>
         </Text>
         <Text
           cursor={"pointer"}
@@ -72,7 +74,9 @@ const OutclassNavigation = () => {
           borderRadius={"base"}
           _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
         >
-          ABOUT US
+          <Link href={"/about"} prefetch={false}>
+            ABOUT US
+          </Link>
         </Text>
         <Button
           textColor={"white"}
@@ -101,7 +105,9 @@ const OutclassNavigation = () => {
             JOIN US!
           </Text>
           <Text fontWeight={"light"} letterSpacing={"2px"} fontSize={"smaller"}>
-            VIP CLUB
+            <Link href={"/vip"} prefetch={false}>
+              VIP CLUB
+            </Link>
           </Text>
         </Button>
       </Flex>

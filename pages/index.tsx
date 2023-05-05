@@ -140,7 +140,9 @@ const Home = () => {
             borderRadius={"base"}
             _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
           >
-            HOME
+            <Link href={"/"} prefetch={false}>
+              HOME
+            </Link>
           </Text>
           <Text
             cursor={"pointer"}
@@ -152,7 +154,9 @@ const Home = () => {
             borderRadius={"base"}
             _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
           >
-            DETAILING
+            <Link href={"/services"} prefetch={false}>
+              VALETS
+            </Link>
           </Text>
           <Text
             cursor={"pointer"}
@@ -176,14 +180,16 @@ const Home = () => {
             borderRadius={"base"}
             _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
           >
-            ABOUT
+            <Link href={"/about"} prefetch={false}>
+              ABOUT US
+            </Link>
           </Text>
           <Button
             textColor={"white"}
-            backgroundColor={"blackAlpha.500"}
+            backgroundColor={"whiteAlpha.500"}
             boxShadow={"dark-lg"}
             _hover={{
-              backgroundColor: "whiteAlpha.500",
+              backgroundColor: "whiteAlpha.100",
               color: "white",
             }}
           >
@@ -204,12 +210,10 @@ const Home = () => {
             >
               JOIN US!
             </Text>
-            <Text
-              fontWeight={"light"}
-              letterSpacing={"2px"}
-              fontSize={"smaller"}
-            >
-              VIP CLUB
+            <Text fontWeight={"light"} letterSpacing={"2px"} fontSize={"smaller"}>
+              <Link href={"/vip"} prefetch={false}>
+                VIP CLUB
+              </Link>
             </Text>
           </Button>
         </Flex>
