@@ -4,9 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
 
-const VicePresidenteSubscription = () => {
+const PlatValet = ({ currentPlanType }: { currentPlanType: any }) => {
   return (
     <Flex
+      position={"relative"}
+      minWidth={"sm"}
       direction={"column"}
       cursor={"pointer"}
       backgroundColor={"whiteAlpha.50"}
@@ -14,18 +16,29 @@ const VicePresidenteSubscription = () => {
       padding={2}
       paddingRight={6}
       paddingLeft={6}
+      boxShadow={"rgba(11, 197, 234, 0.10)   0px 5px 30px"}
       borderRadius={"base"}
-      height={"full"}
-      boxShadow={"rgba(56, 178, 172, 0.15)  0px 5px 30px"}
       gap={2}
     >
-      <Flex
-        justify={"space-between"}
-        padding={2}
-        direction={"column"}
-        align={"center"}
-        gap={2}
+      <Text
+        position={"absolute"}
+        borderRadius={"base"}
+        top={-4}
+        right={120}
+        backgroundColor={"cyan.100"}
+        paddingRight={"12px"}
+        paddingLeft={"12px"}
+        paddingTop={"6px"}
+        paddingBottom={"6px"}
+        letterSpacing={"2px"}
+        fontSize={"2xs"}
+        textColor={"cyan.800"}
+        fontWeight={"light"}
+        boxShadow={"rgba(56, 178, 172, 0.15)  0px 5px 30px"}
       >
+        TOP TIER VALET
+      </Text>
+      <Flex justify={"space-between"} padding={2} align={"center"}>
         <Text
           textAlign={"center"}
           fontSize={"lg"}
@@ -33,60 +46,27 @@ const VicePresidenteSubscription = () => {
           textColor={"white"}
           fontWeight={"light"}
         >
-          VICE-PRESIDENTE SUBSCRIPTION
+          PLAT VALET
         </Text>
-
         <Text
           textAlign={"center"}
-          fontSize={"small"}
+          fontSize={"md"}
           letterSpacing={"2px"}
           textColor={"green.300"}
           fontWeight={"bold"}
         >
-          1210€ + 20% ON OUR VALETS
+          650€ / PACK
         </Text>
       </Flex>
       <Divider opacity={"10%"} />
       <motion.div
+        key={currentPlanType}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
         <Flex gap={3.5} padding={4} direction={"column"}>
-          <Flex gap={2}>
-            <Text
-              letterSpacing={"2px"}
-              textColor={"white"}
-              fontWeight={"light"}
-              fontSize={"2xs"}
-            >
-              10X BRONZE VALETS
-            </Text>
-            <FontAwesomeIcon
-              opacity={"85%"}
-              icon={faCheckCircle}
-              color={"lightGreen"}
-            />
-          </Flex>
-
-          <Divider opacity={"10%"} />
-          <Flex gap={2}>
-            <Text
-              letterSpacing={"2px"}
-              textColor={"white"}
-              fontWeight={"light"}
-              fontSize={"2xs"}
-            >
-              1X SILVER VALET
-            </Text>
-            <FontAwesomeIcon
-              opacity={"85%"}
-              icon={faCheckCircle}
-              color={"lightGreen"}
-            />
-          </Flex>
-          <Divider opacity={"10%"} />
           <Flex gap={2}>
             <Text
               letterSpacing={"2px"}
@@ -110,7 +90,72 @@ const VicePresidenteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              MOT BY US
+              TECHNICAL POLISHMENT
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCheckCircle}
+              color={"lightGreen"}
+            />
+          </Flex>
+
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              PAINT PROTECTION
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCheckCircle}
+              color={"lightGreen"}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              CERAMIC COATING ON ALLOYS
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCheckCircle}
+              color={"lightGreen"}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              WATERPROOFING FABRICS 12 MONTHS
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCheckCircle}
+              color={"lightGreen"}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              LEATHER PROTECTION 12 MONTHS
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -124,4 +169,4 @@ const VicePresidenteSubscription = () => {
   );
 };
 
-export default VicePresidenteSubscription;
+export default PlatValet;

@@ -11,7 +11,6 @@ const OutclassNavigation = () => {
       align={"center"}
       padding={"1rem"}
       position={"relative"}
-      top={0}
     >
       <Link href={"/"} prefetch={false}>
         <Image
@@ -22,14 +21,13 @@ const OutclassNavigation = () => {
           width={150}
           height={150}
           src={Logo}
-          alt="Dan Abramov"
+          alt="outclass-logo"
         />
       </Link>
       <Flex gap={12} justify={"space-evenly"} marginRight={100}>
         <Link href={"/"} prefetch={false}>
           <Text
             cursor={"pointer"}
-            fontWeight={"light"}
             fontSize={"smaller"}
             color={"white"}
             padding={"0.5rem"}
@@ -43,7 +41,6 @@ const OutclassNavigation = () => {
         <Link href={"/valets"} prefetch={false}>
           <Text
             cursor={"pointer"}
-            fontWeight={"light"}
             fontSize={"smaller"}
             color={"white"}
             padding={"0.5rem"}
@@ -56,7 +53,6 @@ const OutclassNavigation = () => {
         </Link>
         <Text
           cursor={"pointer"}
-          fontWeight={"light"}
           fontSize={"smaller"}
           color={"white"}
           padding={"0.5rem"}
@@ -69,7 +65,6 @@ const OutclassNavigation = () => {
         <Link href={"/about"} prefetch={false}>
           <Text
             cursor={"pointer"}
-            fontWeight={"light"}
             fontSize={"smaller"}
             color={"white"}
             padding={"0.5rem"}
@@ -84,7 +79,6 @@ const OutclassNavigation = () => {
           <Button
             textColor={"white"}
             backgroundColor={"whiteAlpha.500"}
-            boxShadow={"dark-lg"}
             _hover={{
               backgroundColor: "whiteAlpha.100",
               color: "white",
@@ -104,8 +98,9 @@ const OutclassNavigation = () => {
               fontSize={"2xs"}
               textColor={"green.900"}
               fontWeight={"light"}
+              boxShadow={"rgba(154, 230, 180, 0.15)  0px 10px 50px"}
             >
-              JOIN US!
+              JOIN US !
             </Text>
             <Text
               fontWeight={"light"}

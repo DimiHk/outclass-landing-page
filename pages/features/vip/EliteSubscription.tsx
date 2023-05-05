@@ -9,13 +9,13 @@ const EliteSubscription = () => {
     <Flex
       direction={"column"}
       cursor={"pointer"}
-      backgroundColor={"whiteAlpha.200"}
+      backgroundColor={"whiteAlpha.50"}
       _hover={{ backgroundColor: "whiteAlpha.100" }}
       padding={2}
       paddingRight={6}
       paddingLeft={6}
       borderRadius={"base"}
-      boxShadow={"rgba(154, 230, 180, 0.15)  0px 10px 50px"}
+      boxShadow={"rgba(154, 230, 180, 0.15)  0px 5px 30px"}
       gap={2}
     >
       <Flex

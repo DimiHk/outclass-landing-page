@@ -1,22 +1,12 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Highlight, Text } from "@chakra-ui/react";
 import { faArrowRight, faDollarSign } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { useRef, useEffect } from "react";
 import Link from "next/link";
 import OutclassNavigation from "./components/OutclassNavigation";
 import OutclassInfoHeader from "./components/OutclassInfoHeader";
 
 const Home = () => {
-  const videoRef = useRef<HTMLVideoElement>();
-
-  useEffect(() => {
-    if (videoRef!) {
-      videoRef.current.muted = true;
-      videoRef.current.play();
-    }
-  }, []);
-
   return (
     <React.Fragment>
       <video
@@ -28,9 +18,9 @@ const Home = () => {
           objectFit: "cover",
           aspectRatio: "auto",
         }}
-        ref={videoRef}
         src="video.mp4"
         autoPlay
+        muted
         loop
       />
       <OutclassInfoHeader />
@@ -58,7 +48,7 @@ const Home = () => {
           <Text
             fontSize={"xl"}
             letterSpacing={"2px"}
-            textColor={"white"}
+            textColor={"green.300"}
             fontWeight={"light"}
             fontStyle={"italic"}
           >
@@ -73,22 +63,26 @@ const Home = () => {
           fontStyle={"italic"}
           opacity={"90%"}
         >
-          OUR TEAM OF EXPERT CAR DETAILERS IS HERE TO PROVIDE YOU WITH THE
-          HIGHEST QUALITY CAR CLEANING AND DETAILING SERVICES.
+          <Highlight
+            query={["EXPERT", "DETAILERS", "PROVIDE", "QUALITY", "DETAILING"]}
+            styles={{ textColor: "green.300" }}
+          >
+            OUR TEAM OF EXPERT CAR DETAILERS IS HERE TO PROVIDE YOU WITH THE
+            HIGHEST QUALITY CAR CLEANING AND DETAILING SERVICES.
+          </Highlight>
         </Text>
         <Flex marginTop={2} gap={4}>
           <Link href={"/vip"} prefetch={false}>
             <Button
               textColor={"gray.900"}
               backgroundColor={"whiteAlpha.500"}
-              boxShadow={"dark-lg"}
               _hover={{
                 backgroundColor: "blackAlpha.500",
                 color: "white",
               }}
             >
               <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-                JOIN VIP CLUBE <FontAwesomeIcon icon={faDollarSign} />
+                CHECK VIP CLUBE <FontAwesomeIcon icon={faDollarSign} />
               </Text>
             </Button>
           </Link>
@@ -96,14 +90,13 @@ const Home = () => {
             <Button
               textColor={"gray.900"}
               backgroundColor={"whiteAlpha.500"}
-              boxShadow={"dark-lg"}
               _hover={{
                 backgroundColor: "blackAlpha.500",
                 color: "white",
               }}
             >
               <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-                CHECK OUR SERVICES <FontAwesomeIcon icon={faArrowRight} />
+                CHECK OUR VALETS <FontAwesomeIcon icon={faArrowRight} />
               </Text>
             </Button>
           </Link>

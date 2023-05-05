@@ -1,13 +1,13 @@
 import { Flex, Divider } from "@chakra-ui/react";
 import React, { useState } from "react";
 import withLandingLayout from "./layouts/LandingPageLayout";
-import OutclassValetsHeader from "./features/services/OutclassValetsHeader";
-import OutclassSubHeader from "./features/services/OutclassSubHeader";
-import SilverValet from "./features/services/SilverValet";
-import GoldValet from "./features/services/GoldValet";
-import PlatValet from "./features/services/PlatValet";
-import PicturesHeader from "./features/services/PicturesHeader";
-import ServicesPictures from "./features/services/ServicesPictures";
+import OutclassValetsHeader from "./features/valets/OutclassValetsHeader";
+import OutclassSubHeader from "./features/valets/OutclassSubHeader";
+import SilverValet from "./features/valets/SilverValet";
+import GoldValet from "./features/valets/GoldValet";
+import PlatValet from "./features/valets/PlatValet";
+import PicturesHeader from "./features/valets/PicturesHeader";
+import ServicesPictures from "./features/valets/ServicesPictures";
 
 const Services = () => {
   const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
@@ -25,7 +25,7 @@ const Services = () => {
           handleSelectChange={handleSelectChange}
         />
       </Flex>
-      <Flex justify={"center"} gap={6} align={"flex-start"} padding={4}>
+      <Flex justify={"center"} gap={12} align={"flex-start"} padding={4}>
         <SilverValet currentPlanType={currentPlanType} />
         <GoldValet currentPlanType={currentPlanType} />
         <PlatValet currentPlanType={currentPlanType} />
