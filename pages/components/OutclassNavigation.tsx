@@ -51,17 +51,19 @@ const OutclassNavigation = () => {
             VALETS
           </Text>
         </Link>
-        <Text
-          cursor={"pointer"}
-          fontSize={"smaller"}
-          color={"white"}
-          padding={"0.5rem"}
-          letterSpacing={"2px"}
-          borderRadius={"base"}
-          _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
-        >
-          PPF
-        </Text>
+        <Link href={"/ppf"} prefetch={false}>
+          <Text
+            cursor={"pointer"}
+            fontSize={"smaller"}
+            color={"white"}
+            padding={"0.5rem"}
+            letterSpacing={"2px"}
+            borderRadius={"base"}
+            _hover={{ backgroundColor: "whiteAlpha.300", shadow: "xl" }}
+          >
+            PPF
+          </Text>
+        </Link>
         <Link href={"/about"} prefetch={false}>
           <Text
             cursor={"pointer"}

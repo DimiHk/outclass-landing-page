@@ -3172,6 +3172,11 @@ prop-types@^15.6.2, prop-types@^15.8.1:
     object-assign "^4.1.1"
     react-is "^16.13.1"
 
+pspdfkit@^2023.2.0:
+  version "2023.2.0"
+  resolved "https://registry.yarnpkg.com/pspdfkit/-/pspdfkit-2023.2.0.tgz#c568233f7e8230aa58f93e2d8c7ceb6f4c0f0d10"
+  integrity sha512-SKUTfMSAijwmFvAw/plv7r7yRcjSNanzZ//pw0rVCCyry78zHpaOfBKJVfWmlozVjVHjUeCiM1TcLHom6ye4DA==
+
 pump@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/pump/-/pump-3.0.0.tgz#b4a2116815bde2f4e1ea602354e8c75565107a64"

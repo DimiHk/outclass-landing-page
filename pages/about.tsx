@@ -1,18 +1,8 @@
 import React from "react";
 import withLandingLayout from "./layouts/LandingPageLayout";
-import {
-  Badge,
-  Box,
-  Center,
-  Divider,
-  Flex,
-  SimpleGrid,
-  Text,
-} from "@chakra-ui/react";
+import { Divider, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import GroupImage from "../public/lotus-yasha.jpg";
-import { faHandPointRight } from "@fortawesome/pro-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const about = () => {
   const whatWeMaster = [
@@ -194,7 +184,6 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
                   transition: "transform 0.1s ease-in-out",
                 }}
               >
-                {/*   <FontAwesomeIcon icon={faHandPointRight} /> */}
                 <Text
                   textAlign={"left"}
                   fontSize={"2xs"}
