@@ -83,9 +83,7 @@ const ProtectionFilm = () => {
               cursor={"pointer"}
               backgroundColor={"whiteAlpha.50"}
               _hover={{ backgroundColor: "whiteAlpha.100" }}
-              padding={2}
-              paddingRight={6}
-              paddingLeft={6}
+              padding={{ base: "0.5rem", md: 2 }}
               borderRadius={"base"}
               gap={2}
               boxShadow={"rgba(246, 224, 94, 0.10) 0px 5px 30px"}
@@ -127,7 +125,7 @@ const ProtectionFilm = () => {
               <Divider opacity={"10%"} />
               <Flex
                 direction={{ base: "column", "2xl": "row" }}
-                padding={2}
+                padding={{ base: "0.5rem", md: 2 }}
                 justify={"space-around"}
                 align={"center"}
                 gap={{ base: 4, md: undefined }}
