@@ -9,18 +9,18 @@ import {
   ModalCloseButton,
   useDisclosure,
   Center,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import Logo from "../public/outclass-logo-variant.gif";
 import Link from "next/link";
-import { useBreakpoints } from "../lib/useBrakepoints";
 import { faBars } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OutclassInfoHeader from "./OutclassInfoHeader";
 
 const OutclassNavigation = () => {
-  const { isSmallerThanMd } = useBreakpoints();
+  const [isSmallerThanSm] = useMediaQuery("(max-width: 48em)"); // 768px
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex

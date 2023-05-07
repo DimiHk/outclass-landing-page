@@ -9,6 +9,7 @@ import {
   Grid,
   GridItem,
   Text,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import FullFront from "../public/full-front.png";
@@ -16,7 +17,6 @@ import FullKit from "../public/complete.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/pro-solid-svg-icons";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
-import { useBreakpoints } from "../lib/useBrakepoints";
 
 const PDFViewer = () => {
   return (
@@ -29,7 +29,7 @@ const PDFViewer = () => {
 };
 
 const ProtectionFilm = () => {
-  const { isSmallerThanMd } = useBreakpoints();
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 62em)"); // 992px
 
   const fullVehicle = [
     "FULL FRONT AND REAR BUMPER",

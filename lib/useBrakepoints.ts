@@ -1,4 +1,4 @@
-import { useMediaQuery } from "@chakra-ui/react";
+/* import { useMediaQuery } from "@chakra-ui/react";
 
 export const useBreakpoints = () => {
   const [isSmallerThanXs] = useMediaQuery("(max-width: 30em)"); // 480px
@@ -17,3 +17,4 @@ export const useBreakpoints = () => {
     isLargerThanXl,
   };
 };
+ */
