@@ -16,7 +16,7 @@ import FullKit from "../public/complete.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/pro-solid-svg-icons";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
-import useBreakpoints from "./hooks/useBrakepoints";
+import { useBreakpoints } from "./hooks/useBrakepoints";
 
 const PDFViewer = () => {
   return (

@@ -1,5 +1,5 @@
-import { Flex, Divider } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Flex } from "@chakra-ui/react";
+import React from "react";
 import withLandingLayout from "./layouts/LandingPageLayout";
 import OutclassValetsHeader from "./features/valets/OutclassValetsHeader";
 import OutclassSubHeader from "./features/valets/OutclassSubHeader";
