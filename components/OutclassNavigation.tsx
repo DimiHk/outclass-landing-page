@@ -9,7 +9,6 @@ import {
   ModalCloseButton,
   useDisclosure,
   Center,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -17,10 +16,10 @@ import Logo from "../public/outclass-logo-variant.gif";
 import Link from "next/link";
 import { faBars } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import OutclassInfoHeader from "./OutclassInfoHeader";
+import useBrakepoints from "../hooks/useBreakpoints";
 
 const OutclassNavigation = () => {
-  const [isSmallerThanMd] = useMediaQuery("(max-width: 62em)"); // 768px
+  const brakpoint = useBrakepoints();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
@@ -42,7 +41,7 @@ const OutclassNavigation = () => {
         />
       </Link>
       <Flex
-        hidden={isSmallerThanMd ? true : false}
+        hidden={brakpoint === "md" ? true : false}
         gap={{ lg: 10, xl: 12 }}
         justify={"space-evenly"}
         marginRight={{ lg: 85, xl: 100 }}
@@ -149,7 +148,7 @@ const OutclassNavigation = () => {
           </Button>
         </Link>
       </Flex>
-      {isSmallerThanMd && (
+      {brakpoint === "md" && (
         <FontAwesomeIcon
           color="white"
           style={{ marginRight: "1rem" }}
