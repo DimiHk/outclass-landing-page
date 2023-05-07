@@ -5,8 +5,10 @@ import React from "react";
 import Link from "next/link";
 import OutclassNavigation from "../components/OutclassNavigation";
 import OutclassInfoHeader from "../components/OutclassInfoHeader";
+import useQuery from "../hooks/useQuery";
 
 const Home = () => {
+  const { isSmallerThanMd } = useQuery();
   return (
     <React.Fragment>
       <video
@@ -23,7 +25,7 @@ const Home = () => {
         muted
         loop
       />
-      <OutclassInfoHeader />
+      {isSmallerThanMd && <OutclassInfoHeader />}
       <OutclassNavigation />
       <Flex
         direction={"column"}
