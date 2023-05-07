@@ -16,7 +16,7 @@ import FullKit from "../public/complete.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/pro-solid-svg-icons";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
-import useBrakepoints from "../hooks/useBreakpoints";
+import useQuery from "../hooks/useQuery";
 
 const PDFViewer = () => {
   return (
@@ -29,7 +29,7 @@ const PDFViewer = () => {
 };
 
 const ProtectionFilm = () => {
-  const brakepoint = useBrakepoints();
+  const { isSmallerThanMd } = useQuery();
 
   const fullVehicle = [
     "FULL FRONT AND REAR BUMPER",
@@ -74,7 +74,7 @@ const ProtectionFilm = () => {
           <span style={{ color: "#68D391" }}>{" HERE "}! </span>
         </Text>
         <Grid templateColumns="repeat(2, 1fr)" padding={6} gap={12}>
-          <GridItem colSpan={brakepoint === "md" ? 2 : 1} h={"100%"}>
+          <GridItem colSpan={isSmallerThanMd ? 2 : 1} h={"100%"}>
             <Flex
               position={"relative"}
               height={"full"}
@@ -175,7 +175,7 @@ const ProtectionFilm = () => {
               </Flex>
             </Flex>
           </GridItem>
-          <GridItem colSpan={brakepoint === "md" ? 2 : 1} h={"100%"}>
+          <GridItem colSpan={isSmallerThanMd ? 2 : 1} h={"100%"}>
             <Flex
               position={"relative"}
               height={"full"}
@@ -287,7 +287,7 @@ const ProtectionFilm = () => {
               <video
                 style={{
                   width: "100%",
-                  height: brakepoint === "md" ? "100vh" : "75vh",
+                  height: isSmallerThanMd ? "100vh" : "75vh",
                   objectFit: "cover",
                   aspectRatio: "16 / 9",
                   borderRadius: "0.5rem",

@@ -16,10 +16,10 @@ import Logo from "../public/outclass-logo-variant.gif";
 import Link from "next/link";
 import { faBars } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import useBrakepoints from "../hooks/useBreakpoints";
+import useQuery from "../hooks/useQuery";
 
 const OutclassNavigation = () => {
-  const brakpoint = useBrakepoints();
+  const { isSmallerThanMd } = useQuery();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
@@ -41,7 +41,7 @@ const OutclassNavigation = () => {
         />
       </Link>
       <Flex
-        hidden={brakpoint === "md" ? true : false}
+        hidden={isSmallerThanMd ? true : false}
         gap={{ lg: 10, xl: 12 }}
         justify={"space-evenly"}
         marginRight={{ lg: 85, xl: 100 }}
@@ -148,7 +148,7 @@ const OutclassNavigation = () => {
           </Button>
         </Link>
       </Flex>
-      {brakpoint === "md" && (
+      {isSmallerThanMd && (
         <FontAwesomeIcon
           color="white"
           style={{ marginRight: "1rem" }}
