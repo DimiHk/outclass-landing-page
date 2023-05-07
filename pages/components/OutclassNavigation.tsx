@@ -14,7 +14,7 @@ import Image from "next/image";
 import React from "react";
 import Logo from "../../public/outclass-logo-variant.gif";
 import Link from "next/link";
-import { useBreakpoints } from "../hooks/useBrakepoints";
+import { useBreakpoints } from "../../hooks/useBrakepoints";
 import { faBars } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OutclassInfoHeader from "./OutclassInfoHeader";

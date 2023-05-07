@@ -4,7 +4,7 @@ import { AspectRatio, Center, Grid, GridItem } from "@chakra-ui/react";
 import VipHeader from "./features/vip/VipHeader";
 import EliteSubscription from "./features/vip/EliteSubscription";
 import VicePresidenteSubscription from "./features/vip/VicePresidenteSubscription";
-import { useBreakpoints } from "./hooks/useBrakepoints";
+import { useBreakpoints } from "../hooks/useBrakepoints";
 
 const Vip = () => {
   const { isSmallerThanMd } = useBreakpoints();
