@@ -3,8 +3,8 @@ import { faArrowRight, faDollarSign } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Link from "next/link";
-import OutclassNavigation from "./components/OutclassNavigation";
-import OutclassInfoHeader from "./components/OutclassInfoHeader";
+import OutclassNavigation from "../components/OutclassNavigation";
+import OutclassInfoHeader from "../components/OutclassInfoHeader";
 
 const Home = () => {
   return (

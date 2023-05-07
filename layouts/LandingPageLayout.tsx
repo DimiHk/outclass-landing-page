@@ -1,8 +1,8 @@
 import { ComponentType } from "react";
-import OutclassInfoHeader from "../components/OutclassInfoHeader";
-import OutclassNavigation from "../components/OutclassNavigation";
 import React from "react";
 import { Flex } from "@chakra-ui/react";
+import OutclassInfoHeader from "../components/OutclassInfoHeader";
+import OutclassNavigation from "../components/OutclassNavigation";
 
 const Layout = ({ children }: { children: any }) => {
   return (

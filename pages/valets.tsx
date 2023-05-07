@@ -1,13 +1,13 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
-import withLandingLayout from "./layouts/LandingPageLayout";
-import OutclassValetsHeader from "./features/valets/OutclassValetsHeader";
-import OutclassSubHeader from "./features/valets/OutclassSubHeader";
-import SilverValet from "./features/valets/SilverValet";
-import GoldValet from "./features/valets/GoldValet";
-import PlatValet from "./features/valets/PlatValet";
-import PicturesHeader from "./features/valets/PicturesHeader";
-import ServicesPictures from "./features/valets/ServicesPictures";
+import withLandingLayout from "../layouts/LandingPageLayout";
+import OutclassValetsHeader from "../features/valets/OutclassValetsHeader";
+import OutclassSubHeader from "../features/valets/OutclassSubHeader";
+import SilverValet from "../features/valets/SilverValet";
+import GoldValet from "../features/valets/GoldValet";
+import PlatValet from "../features/valets/PlatValet";
+import PicturesHeader from "../features/valets/PicturesHeader";
+import ServicesPictures from "../features/valets/ServicesPictures";
 
 const Services = () => {
   return (

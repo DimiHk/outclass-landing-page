@@ -1,5 +1,5 @@
 import React from "react";
-import withLandingLayout from "./layouts/LandingPageLayout";
+import withLandingLayout from "../layouts/LandingPageLayout";
 import { Divider, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import GroupImage from "../public/lotus-yasha.jpg";

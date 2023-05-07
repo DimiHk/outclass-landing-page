@@ -1,5 +1,5 @@
 import React from "react";
-import withLandingLayout from "./layouts/LandingPageLayout";
+import withLandingLayout from "../layouts/LandingPageLayout";
 import { Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 
 const Detailing = () => {
