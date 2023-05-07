@@ -17,3 +17,5 @@ export const useBreakpoints = () => {
     isLargerThanXl,
   };
 };
+
+export default useBreakpoints;
