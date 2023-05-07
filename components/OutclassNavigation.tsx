@@ -20,7 +20,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import OutclassInfoHeader from "./OutclassInfoHeader";
 
 const OutclassNavigation = () => {
-  const [isSmallerThanSm] = useMediaQuery("(max-width: 48em)"); // 768px
+  const [isSmallerThanMd] = useMediaQuery("(max-width: 62em)"); // 768px
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Flex
