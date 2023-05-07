@@ -6,9 +6,12 @@ import Link from "next/link";
 import OutclassNavigation from "../components/OutclassNavigation";
 import OutclassInfoHeader from "../components/OutclassInfoHeader";
 import useQuery from "../hooks/useQuery";
+import useLocal from "../hooks/useLocal";
 
 const Home = () => {
   const { isSmallerThanMd } = useQuery();
+  const translations = useLocal();
+  console.log(translations);
   return (
     <React.Fragment>
       <video
