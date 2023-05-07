@@ -12,7 +12,12 @@ import React from "react";
 
 const ServicesPictures = () => {
   return (
-    <SimpleGrid marginTop={8} columns={4} spacing={12} position={"relative"}>
+    <SimpleGrid
+      marginTop={8}
+      columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
+      spacing={12}
+      position={"relative"}
+    >
       <Image
         quality={75}
         className="services-images"

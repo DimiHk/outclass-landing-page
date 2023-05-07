@@ -10,27 +10,23 @@ import PicturesHeader from "./features/valets/PicturesHeader";
 import ServicesPictures from "./features/valets/ServicesPictures";
 
 const Services = () => {
-  const [currentPlanType, setcurrentPlanType] = useState<string>("INTERIOR");
-
-  const handleSelectChange = (event) => {
-    setcurrentPlanType(event.target.value);
-  };
-
   return (
     <React.Fragment>
       <Flex direction={"column"} padding={"0.5rem"}>
         <OutclassValetsHeader />
-        <OutclassSubHeader
-          currentPlanType={currentPlanType}
-          handleSelectChange={handleSelectChange}
-        />
+        <OutclassSubHeader />
       </Flex>
-      <Flex justify={"center"} gap={12} align={"flex-start"} padding={4}>
-        <SilverValet currentPlanType={currentPlanType} />
-        <GoldValet currentPlanType={currentPlanType} />
-        <PlatValet currentPlanType={currentPlanType} />
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        justify={"center"}
+        gap={12}
+        align={"flex-start"}
+        padding={4}
+      >
+        <SilverValet />
+        <GoldValet />
+        <PlatValet />
       </Flex>
-      <Divider opacity={"10%"} />
       <Flex
         direction={"column"}
         width={"full"}

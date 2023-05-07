@@ -1,13 +1,7 @@
-import { Flex, Select, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-const OutclassSubHeader = ({
-  currentPlanType,
-  handleSelectChange,
-}: {
-  currentPlanType: any;
-  handleSelectChange: any;
-}) => {
+const OutclassSubHeader = () => {
   return (
     <Flex
       gap={4}
@@ -29,30 +23,6 @@ const OutclassSubHeader = ({
         DETAILING
         <span style={{ color: "#68D391" }}>{" VALET "}</span> PACKAGES
       </Text>
-      <Select
-        cursor={"pointer"}
-        textColor={"white"}
-        fontWeight={"bold"}
-        letterSpacing={"2px"}
-        width="fit-content"
-        iconColor={"white"}
-        fontSize={"xs"}
-        value={currentPlanType}
-        onChange={handleSelectChange}
-      >
-        <option
-          value={"INTERIOR"}
-          style={{ color: "black", cursor: "pointer" }}
-        >
-          INTERIOR
-        </option>
-        <option
-          value={"EXTERIOR"}
-          style={{ color: "black", cursor: "pointer" }}
-        >
-          EXTERIOR
-        </option>
-      </Select>
     </Flex>
   );
 };

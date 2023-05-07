@@ -4,6 +4,7 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 
 import "@fontsource/open-sans/400.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import "@react-pdf-viewer/core/lib/styles/index.css";
 import "../styles/globals.css";
 
 config.autoAddCss = true;
@@ -20,8 +21,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Container
         minWidth={"full"}
-        minHeight="100vh"
+        minHeight={"100vh"}
         backgroundColor={"blackAlpha.900"}
+        padding={0}
+        margin={0}
       >
         <Component suppressHydrationWarning={true} {...pageProps} />
       </Container>

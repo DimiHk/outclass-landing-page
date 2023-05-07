@@ -42,7 +42,7 @@ const EliteSubscription = () => {
           textColor={"green.300"}
           fontWeight={"bold"}
         >
-          1900€ + 30% ON OUR VALETS
+          1900€ + 30% ON OUR SERVICES
         </Text>
       </Flex>
       <Divider opacity={"10%"} />

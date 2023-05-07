@@ -27,40 +27,42 @@ const Home = () => {
       <OutclassNavigation />
       <Flex
         direction={"column"}
-        marginTop={140}
+        marginTop={{ base: 50, md: 140 }}
         align={"left"}
-        position={"absolute"}
+        position={"relative"}
         padding={6}
-        gap={4}
+        gap={{ base: 6, sm: 4 }}
         width={"full"}
-        height={"-webkit-fill-available"}
+        height={"full"}
       >
         <Flex gap={4} direction={"column"}>
           <Heading
             as={"h1"}
             letterSpacing={"2px"}
             textColor={"white"}
+            textAlign={{ base: "center", sm: "start" }}
             fontWeight={"bold"}
             fontStyle={"italic"}
           >
             OUTCLASS CAR DETAIL
           </Heading>
           <Text
-            fontSize={"xl"}
             letterSpacing={"2px"}
             textColor={"green.300"}
-            fontWeight={"light"}
+            fontWeight={"semibold"}
             fontStyle={"italic"}
+            textAlign={{ base: "center", sm: "start" }}
           >
             “EXCELLENCE IS EARNED, NOT PROCLAIMED”
           </Text>
         </Flex>
         <Text
-          width={"3xl"}
+          width={{ base: "xs", sm: "md", md: "2xl" }}
           letterSpacing={"2px"}
           textColor={"white"}
-          fontWeight={"light"}
+          fontWeight={"semibold"}
           fontStyle={"italic"}
+          textAlign={{ base: "center", sm: "start" }}
           opacity={"90%"}
         >
           <Highlight
@@ -71,9 +73,10 @@ const Home = () => {
             HIGHEST QUALITY CAR CLEANING AND DETAILING SERVICES.
           </Highlight>
         </Text>
-        <Flex marginTop={2} gap={4}>
+        <Flex direction={{ base: "column", sm: "row" }} marginTop={2} gap={4}>
           <Link href={"/vip"} prefetch={false}>
             <Button
+              width={{ base: "full", sm: undefined }}
               textColor={"gray.900"}
               backgroundColor={"whiteAlpha.500"}
               _hover={{
@@ -88,6 +91,7 @@ const Home = () => {
           </Link>
           <Link href={"/valets"} prefetch={false}>
             <Button
+              width={{ base: "full", sm: undefined }}
               textColor={"gray.900"}
               backgroundColor={"whiteAlpha.500"}
               _hover={{

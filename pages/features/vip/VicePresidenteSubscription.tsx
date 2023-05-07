@@ -43,7 +43,7 @@ const VicePresidenteSubscription = () => {
           textColor={"green.300"}
           fontWeight={"bold"}
         >
-          1210€ + 20% ON OUR VALETS
+          1210€ + 20% ON OUR SERVICES
         </Text>
       </Flex>
       <Divider opacity={"10%"} />

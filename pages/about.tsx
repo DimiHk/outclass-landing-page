@@ -24,7 +24,11 @@ const about = () => {
   ];
   return (
     <React.Fragment>
-      <SimpleGrid columns={2} spacing={12} position={"relative"}>
+      <SimpleGrid
+        columns={{ base: 1, xl: 2 }}
+        spacing={12}
+        position={"relative"}
+      >
         <SimpleGrid columns={1} spacing={12} position={"relative"}>
           <Flex direction={"column"} gap={2}>
             <Text
@@ -56,7 +60,6 @@ const about = () => {
               letterSpacing={"2px"}
               textColor={"white"}
               fontWeight={"light"}
-              fontStyle={"italic"}
             >
               {`
 We are proud to be one of the largest detailing companies in Portugal, with an extensive network that covers the entire region and even extends to Western Spain.`}
@@ -95,7 +98,6 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
                 letterSpacing={"2px"}
                 textColor={"white"}
                 fontWeight={"light"}
-                fontStyle={"italic"}
               >
                 {`Our passionate and professional team is dedicated to providing solutions to your problems with trust and mastery.`}
               </Text>
@@ -105,7 +107,6 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
                 letterSpacing={"2px"}
                 textColor={"white"}
                 fontWeight={"light"}
-                fontStyle={"italic"}
               >
                 {`We strive for excellence in everything we do and take great pride in our work.`}
               </Text>
@@ -118,7 +119,7 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
           style={{
             borderRadius: "0.5rem",
             objectFit: "cover",
-            width: "90%",
+            width: "100%",
             cursor: "pointer",
             boxShadow: "rgba(255, 255, 255, 0.02)  0px 10px 50px",
           }}
@@ -189,7 +190,6 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
                   fontSize={"2xs"}
                   letterSpacing={"2px"}
                   fontWeight={"light"}
-                  fontStyle={"italic"}
                 >
                   {service}
                 </Text>

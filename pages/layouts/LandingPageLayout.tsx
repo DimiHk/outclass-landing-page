@@ -12,6 +12,7 @@ const Layout = ({ children }: { children: any }) => {
       <Flex
         direction={"column"}
         width={"full"}
+        height={"full"}
         justify={"center"}
         padding={"1rem"}
         gap={6}

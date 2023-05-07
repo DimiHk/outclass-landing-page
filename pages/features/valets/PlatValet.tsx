@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
 
-const PlatValet = ({ currentPlanType }: { currentPlanType: any }) => {
+const PlatValet = () => {
   return (
     <Flex
+      width={"full"}
+      height={"full"}
       position={"relative"}
-      minWidth={"sm"}
       direction={"column"}
       cursor={"pointer"}
       backgroundColor={"whiteAlpha.50"}
@@ -60,7 +61,6 @@ const PlatValet = ({ currentPlanType }: { currentPlanType: any }) => {
       </Flex>
       <Divider opacity={"10%"} />
       <motion.div
-        key={currentPlanType}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

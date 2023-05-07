@@ -1,39 +1,52 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import withLandingLayout from "./layouts/LandingPageLayout";
 import {
   AspectRatio,
   Box,
+  Button,
   Divider,
   Flex,
   Grid,
   GridItem,
   Text,
 } from "@chakra-ui/react";
+import Image from "next/image";
+import FullFront from "../public/full-front.png";
+import FullKit from "../public/complete.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheckCircle } from "@fortawesome/pro-solid-svg-icons";
+import { Viewer, Worker } from "@react-pdf-viewer/core";
+import useBreakpoints from "./hooks/useBrakepoints";
+
+const PDFViewer = () => {
+  return (
+    <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.js">
+      <Box marginTop={4} width={"full"} height={"xl"}>
+        <Viewer fileUrl="catalog.pdf" />
+      </Box>
+    </Worker>
+  );
+};
 
 const ProtectionFilm = () => {
-  const containerRef = useRef(null);
+  const { isSmallerThanMd } = useBreakpoints();
 
-  useEffect(() => {
-    const container = containerRef.current;
-    let PSPDFKit;
+  const fullVehicle = [
+    "FULL FRONT AND REAR BUMPER",
+    "FULL HOOD, ROOF AND TRUNK",
+    "FULL DRIVER AND PASSENGER SIDE",
+    "FULL QUARTER AND ROCKER PANELS",
+    "SIDE VIEW MIRRORS",
+    "HEADLIGHTS",
+  ];
 
-    (async function () {
-      PSPDFKit = await import("pspdfkit");
-
-      if (PSPDFKit) {
-        PSPDFKit.unload(container);
-      }
-
-      await PSPDFKit.load({
-        theme: PSPDFKit.Theme.DARK,
-        container,
-        document: "/catalog.pdf",
-        baseUrl: `${window.location.protocol}//${window.location.host}/`,
-      });
-    })();
-
-    return () => PSPDFKit && PSPDFKit.unload(container);
-  }, []);
+  const fullFront = [
+    "FULL HOOD",
+    "FULL FENDERS",
+    "FULL FRONT BUMPER",
+    "SIDE VIEW MIRRORS",
+    "HEADLIGHTS",
+  ];
 
   return (
     <React.Fragment>
@@ -60,12 +73,12 @@ const ProtectionFilm = () => {
           PACKAGES
           <span style={{ color: "#68D391" }}>{" HERE "}! </span>
         </Text>
-
         <Grid templateColumns="repeat(2, 1fr)" padding={6} gap={12}>
-          <GridItem h={"100%"}>
+          <GridItem colSpan={isSmallerThanMd ? 2 : 1} h={"100%"}>
             <Flex
               position={"relative"}
-              minWidth={"md"}
+              height={"full"}
+              width={"full"}
               direction={"column"}
               cursor={"pointer"}
               backgroundColor={"whiteAlpha.50"}
@@ -77,88 +90,15 @@ const ProtectionFilm = () => {
               gap={2}
               boxShadow={"rgba(246, 224, 94, 0.10) 0px 5px 30px"}
             >
-              <Flex justify={"space-between"} padding={2} align={"center"}>
+              <Flex
+                gap={{ base: 6, md: 4 }}
+                padding={2}
+                justify={"space-between"}
+                align={"center"}
+              >
                 <Text
                   textAlign={"center"}
-                  fontSize={"lg"}
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                >
-                  COMPLETE COVERAGE
-                </Text>
-
-                <Text
-                  textAlign={"center"}
-                  fontSize={"md"}
-                  letterSpacing={"2px"}
-                  textColor={"green.300"}
-                  fontWeight={"bold"}
-                >
-                  ---€ / PACK
-                </Text>
-              </Flex>
-              <Divider opacity={"10%"} />
-            </Flex>
-          </GridItem>
-          <GridItem h={"100%"}>
-            <Flex
-              position={"relative"}
-              minWidth={"md"}
-              direction={"column"}
-              cursor={"pointer"}
-              backgroundColor={"whiteAlpha.50"}
-              _hover={{ backgroundColor: "whiteAlpha.100" }}
-              padding={2}
-              paddingRight={6}
-              paddingLeft={6}
-              borderRadius={"base"}
-              gap={2}
-              boxShadow={"rgba(246, 224, 94, 0.10) 0px 5px 30px"}
-            >
-              <Flex justify={"space-between"} padding={2} align={"center"}>
-                <Text
-                  textAlign={"center"}
-                  fontSize={"lg"}
-                  letterSpacing={"2px"}
-                  textColor={"white"}
-                  fontWeight={"light"}
-                >
-                  SINGLE PANEL
-                </Text>
-
-                <Text
-                  textAlign={"center"}
-                  fontSize={"md"}
-                  letterSpacing={"2px"}
-                  textColor={"green.300"}
-                  fontWeight={"bold"}
-                >
-                  ---€ / PACK
-                </Text>
-              </Flex>
-              <Divider opacity={"10%"} />
-            </Flex>
-          </GridItem>
-          <GridItem h={"100%"}>
-            <Flex
-              position={"relative"}
-              minWidth={"md"}
-              direction={"column"}
-              cursor={"pointer"}
-              backgroundColor={"whiteAlpha.50"}
-              _hover={{ backgroundColor: "whiteAlpha.100" }}
-              padding={2}
-              paddingRight={6}
-              paddingLeft={6}
-              borderRadius={"base"}
-              gap={2}
-              boxShadow={"rgba(246, 224, 94, 0.10) 0px 5px 30px"}
-            >
-              <Flex justify={"space-between"} padding={2} align={"center"}>
-                <Text
-                  textAlign={"center"}
-                  fontSize={"lg"}
+                  fontSize={{ base: "xs", md: "lg" }}
                   letterSpacing={"2px"}
                   textColor={"white"}
                   fontWeight={"light"}
@@ -166,23 +106,80 @@ const ProtectionFilm = () => {
                   FULL FRONT END KIT
                 </Text>
 
-                <Text
-                  textAlign={"center"}
-                  fontSize={"md"}
-                  letterSpacing={"2px"}
-                  textColor={"green.300"}
-                  fontWeight={"bold"}
+                <Button
+                  textColor={"gray.900"}
+                  backgroundColor={"whiteAlpha.500"}
+                  size={{ base: "sm", md: "md" }}
+                  _hover={{
+                    backgroundColor: "blackAlpha.500",
+                    color: "white",
+                  }}
                 >
-                  ---€ / PACK
-                </Text>
+                  <Text
+                    letterSpacing={"2px"}
+                    fontWeight={"semibold"}
+                    fontSize={"2xs"}
+                  >
+                    GET QUOTE
+                  </Text>
+                </Button>
               </Flex>
               <Divider opacity={"10%"} />
+              <Flex
+                direction={{ base: "column", "2xl": "row" }}
+                padding={2}
+                justify={"space-around"}
+                align={"center"}
+                gap={{ base: 4, md: undefined }}
+              >
+                <Image
+                  quality={75}
+                  className="services-images"
+                  style={{
+                    borderRadius: "0.25rem",
+                    objectFit: "cover",
+                    cursor: "pointer",
+                  }}
+                  width={360}
+                  src={FullFront}
+                  alt="work-one"
+                  sizes="50vw"
+                />
+                <Flex
+                  wrap={{ base: "wrap", md: undefined }}
+                  direction={{ base: "row", md: "column" }}
+                  align={"center"}
+                  justify={"center"}
+                  gap={4}
+                >
+                  {fullFront.map((service) => {
+                    return (
+                      <Flex key={service} gap={2}>
+                        <Text
+                          letterSpacing={"2px"}
+                          textColor={"white"}
+                          fontWeight={"light"}
+                          fontSize={"2xs"}
+                        >
+                          {service}
+                        </Text>
+                        <FontAwesomeIcon
+                          opacity={"85%"}
+                          icon={faCheckCircle}
+                          color={"lightGreen"}
+                        />
+                      </Flex>
+                    );
+                  })}
+                </Flex>
+              </Flex>
             </Flex>
           </GridItem>
-          <GridItem h={"100%"}>
+          <GridItem colSpan={isSmallerThanMd ? 2 : 1} h={"100%"}>
             <Flex
               position={"relative"}
-              minWidth={"md"}
+              height={"full"}
+              width={"full"}
               direction={"column"}
               cursor={"pointer"}
               backgroundColor={"whiteAlpha.50"}
@@ -194,39 +191,103 @@ const ProtectionFilm = () => {
               gap={2}
               boxShadow={"rgba(246, 224, 94, 0.10) 0px 5px 30px"}
             >
-              <Flex justify={"space-between"} padding={2} align={"center"}>
+              <Flex
+                gap={{ base: 6, md: 4 }}
+                padding={2}
+                justify={"space-between"}
+                align={"center"}
+              >
                 <Text
                   textAlign={"center"}
-                  fontSize={"lg"}
+                  fontSize={{ base: "xs", md: "lg" }}
                   letterSpacing={"2px"}
                   textColor={"white"}
                   fontWeight={"light"}
                 >
-                  CUSTOM PANEL
+                  COMPLETE COVERAGE
                 </Text>
 
-                <Text
-                  textAlign={"center"}
-                  fontSize={"md"}
-                  letterSpacing={"2px"}
-                  textColor={"green.300"}
-                  fontWeight={"bold"}
+                <Button
+                  textColor={"gray.900"}
+                  backgroundColor={"whiteAlpha.500"}
+                  size={{ base: "sm", md: "md" }}
+                  _hover={{
+                    backgroundColor: "blackAlpha.500",
+                    color: "white",
+                  }}
                 >
-                  ---€ / PACK
-                </Text>
+                  <Text
+                    letterSpacing={"2px"}
+                    fontWeight={"semibold"}
+                    fontSize={"2xs"}
+                  >
+                    GET QUOTE
+                  </Text>
+                </Button>
               </Flex>
               <Divider opacity={"10%"} />
+              <Flex
+                direction={{ base: "column", "2xl": "row" }}
+                padding={2}
+                justify={"space-around"}
+                align={"center"}
+                gap={{ base: 4, md: undefined }}
+              >
+                <Image
+                  quality={75}
+                  className="services-images"
+                  style={{
+                    borderRadius: "0.25rem",
+                    objectFit: "cover",
+                    cursor: "pointer",
+                  }}
+                  width={360}
+                  src={FullKit}
+                  alt="work-one"
+                  sizes="50vw"
+                />
+                <Flex
+                  wrap={{ base: "wrap", md: undefined }}
+                  direction={{ base: "row", md: "column" }}
+                  align={"center"}
+                  justify={"center"}
+                  gap={4}
+                >
+                  {fullVehicle.map((service) => {
+                    return (
+                      <Flex
+                        align={"center"}
+                        justify={"center"}
+                        gap={2}
+                        key={service}
+                      >
+                        <Text
+                          letterSpacing={"2px"}
+                          textColor={"white"}
+                          fontWeight={"light"}
+                          fontSize={"2xs"}
+                        >
+                          {service}
+                        </Text>
+                        <FontAwesomeIcon
+                          opacity={"85%"}
+                          icon={faCheckCircle}
+                          color={"lightGreen"}
+                        />
+                      </Flex>
+                    );
+                  })}
+                </Flex>
+              </Flex>
             </Flex>
           </GridItem>
-          <GridItem h={"100%"} colSpan={2}>
-            <Divider opacity={"10%"} />
-          </GridItem>
-          <GridItem h={"75vh"} colSpan={2}>
+
+          <GridItem h={{ base: "100vh", lg: "75vh" }} colSpan={2}>
             <AspectRatio ratio={16 / 9}>
               <video
                 style={{
                   width: "100%",
-                  height: "550px",
+                  height: isSmallerThanMd ? "100vh" : "75vh",
                   objectFit: "cover",
                   aspectRatio: "16 / 9",
                   borderRadius: "0.5rem",
@@ -239,38 +300,31 @@ const ProtectionFilm = () => {
             </AspectRatio>
           </GridItem>
           <GridItem h={"100%"} colSpan={2}>
-            <Divider opacity={"10%"} />
-          </GridItem>
-          <GridItem h={"100%"} colSpan={2}>
-            <Text
-              textAlign={"center"}
-              fontSize={"xl"}
-              letterSpacing={"2px"}
-              textColor={"white"}
-              fontWeight={"bold"}
-              fontStyle={"italic"}
-            >
-              OFFICIAL CATALOGUE
-            </Text>
-            <Text
-              textAlign={"center"}
-              fontSize={"md"}
-              letterSpacing={"2px"}
-              fontWeight={"semibold"}
-              fontStyle={"italic"}
-              textColor={"white"}
-            >
-              <span style={{ color: "#68D391" }}> CHECK {" OUR "} </span>{" "}
-              OFICCIAL PPF
-              <span style={{ color: "#68D391" }}>{" CATALOGUE "} </span>
-            </Text>
-            <Box
-              marginTop={6}
-              width={"full"}
-              borderRadius={"base"}
-              height={"100vh"}
-              ref={containerRef}
-            />
+            <Flex direction={"column"} gap={2}>
+              <Text
+                textAlign={"center"}
+                fontSize={"xl"}
+                letterSpacing={"2px"}
+                textColor={"white"}
+                fontWeight={"bold"}
+                fontStyle={"italic"}
+              >
+                OFFICIAL CATALOGUE
+              </Text>
+              <Text
+                textAlign={"center"}
+                fontSize={"md"}
+                letterSpacing={"2px"}
+                fontWeight={"semibold"}
+                fontStyle={"italic"}
+                textColor={"white"}
+              >
+                <span style={{ color: "#68D391" }}> CHECK {" OUR "} </span>{" "}
+                OFICCIAL PPF
+                <span style={{ color: "#68D391" }}>{" CATALOGUE "} </span>
+              </Text>
+              <PDFViewer />
+            </Flex>
           </GridItem>
         </Grid>
       </Flex>
