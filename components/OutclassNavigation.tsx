@@ -9,6 +9,7 @@ import {
   ModalCloseButton,
   useDisclosure,
   Center,
+  Divider,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
@@ -17,6 +18,7 @@ import Link from "next/link";
 import { faBars } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import useQuery from "../hooks/useQuery";
+import OutclassInfoHeader from "./OutclassInfoHeader";
 
 const OutclassNavigation = () => {
   const { isSmallerThanMd } = useQuery();
@@ -161,6 +163,7 @@ const OutclassNavigation = () => {
         <ModalOverlay bg="none" backdropFilter="auto" backdropBlur="lg" />
         <ModalContent backgroundColor={"blackAlpha.900"}>
           <ModalCloseButton color={"white"} size={"lg"} />
+
           <ModalBody
             justifyItems={"center"}
             alignItems={"center"}
@@ -284,6 +287,8 @@ const OutclassNavigation = () => {
               </Flex>
             </Center>
           </ModalBody>
+          <Divider opacity={"10%"} />
+          <OutclassInfoHeader />
         </ModalContent>
       </Modal>
     </Flex>

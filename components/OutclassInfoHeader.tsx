@@ -8,9 +8,8 @@ import React from "react";
 const OutclassInfoHeader = () => {
   return (
     <Flex
-      hidden
       padding={{ base: 4, xl: 2 }}
-      position={{ base: "absolute", md: "relative" }}
+      position={"relative"}
       bottom={0}
       wrap={{ base: "wrap", lg: undefined }}
       backgroundColor={"blackAlpha.500"}

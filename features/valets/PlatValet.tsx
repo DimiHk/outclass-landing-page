@@ -1,4 +1,4 @@
-import { Flex, Divider, Text } from "@chakra-ui/react";
+import { Flex, Divider, Text, Center } from "@chakra-ui/react";
 import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -21,28 +21,29 @@ const PlatValet = () => {
       borderRadius={"base"}
       gap={2}
     >
-      <Text
-        position={"absolute"}
-        borderRadius={"base"}
-        top={-4}
-        right={120}
-        backgroundColor={"cyan.100"}
-        paddingRight={"12px"}
-        paddingLeft={"12px"}
-        paddingTop={"6px"}
-        paddingBottom={"6px"}
-        letterSpacing={"2px"}
-        fontSize={"2xs"}
-        textColor={"cyan.800"}
-        fontWeight={"light"}
-        boxShadow={"rgba(56, 178, 172, 0.15)  0px 5px 30px"}
-      >
-        TOP TIER VALET
-      </Text>
+      <Center>
+        <Text
+          position={"absolute"}
+          borderRadius={"base"}
+          top={-4}
+          backgroundColor={"cyan.100"}
+          paddingRight={"12px"}
+          paddingLeft={"12px"}
+          paddingTop={"6px"}
+          paddingBottom={"6px"}
+          letterSpacing={"2px"}
+          fontSize={"2xs"}
+          textColor={"cyan.800"}
+          fontWeight={"light"}
+          boxShadow={"rgba(56, 178, 172, 0.15)  0px 5px 30px"}
+        >
+          TOP TIER VALET
+        </Text>
+      </Center>
       <Flex justify={"space-between"} padding={2} align={"center"}>
         <Text
           textAlign={"center"}
-          fontSize={"lg"}
+          fontSize={{ base: "md", md: "lg" }}
           letterSpacing={"2px"}
           textColor={"white"}
           fontWeight={"light"}
@@ -51,7 +52,7 @@ const PlatValet = () => {
         </Text>
         <Text
           textAlign={"center"}
-          fontSize={"md"}
+          fontSize={{ base: "xs", md: "md" }}
           letterSpacing={"2px"}
           textColor={"green.300"}
           fontWeight={"bold"}

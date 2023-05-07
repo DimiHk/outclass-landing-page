@@ -3,11 +3,13 @@ import React from "react";
 import { Flex } from "@chakra-ui/react";
 import OutclassInfoHeader from "../components/OutclassInfoHeader";
 import OutclassNavigation from "../components/OutclassNavigation";
+import useQuery from "../hooks/useQuery";
 
 const Layout = ({ children }: { children: any }) => {
+  const { isSmallerThanMd } = useQuery();
   return (
     <React.Fragment>
-      <OutclassInfoHeader />
+      {!isSmallerThanMd && <OutclassInfoHeader />}
       <OutclassNavigation />
       <Flex
         direction={"column"}

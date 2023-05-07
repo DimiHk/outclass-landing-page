@@ -1,4 +1,4 @@
-import { Flex, Divider, Badge, Text } from "@chakra-ui/react";
+import { Flex, Divider, Badge, Text, Center } from "@chakra-ui/react";
 import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -21,29 +21,30 @@ const GoldValet = () => {
       gap={2}
       boxShadow={"rgba(246, 224, 94, 0.10) 0px 5px 30px"}
     >
-      <Text
-        position={"absolute"}
-        borderRadius={"base"}
-        top={-4}
-        right={145}
-        backgroundColor={"green.100"}
-        paddingRight={"12px"}
-        paddingLeft={"12px"}
-        paddingTop={"6px"}
-        paddingBottom={"6px"}
-        letterSpacing={"2px"}
-        fontSize={"2xs"}
-        textColor={"green.800"}
-        fontWeight={"light"}
-        boxShadow={"rgba(154, 230, 180, 0.15)  0px 10px 50px"}
-      >
-        MOST SELLED VALET
-      </Text>
+      <Center>
+        <Text
+          position={"absolute"}
+          borderRadius={"base"}
+          top={-4}
+          backgroundColor={"green.100"}
+          paddingRight={"12px"}
+          paddingLeft={"12px"}
+          paddingTop={"6px"}
+          paddingBottom={"6px"}
+          letterSpacing={"2px"}
+          fontSize={"2xs"}
+          textColor={"green.800"}
+          fontWeight={"light"}
+          boxShadow={"rgba(154, 230, 180, 0.15)  0px 10px 50px"}
+        >
+          MOST SELLED VALET
+        </Text>
+      </Center>
 
       <Flex justify={"space-between"} padding={2} align={"center"}>
         <Text
           textAlign={"center"}
-          fontSize={"lg"}
+          fontSize={{ base: "md", md: "lg" }}
           letterSpacing={"2px"}
           textColor={"white"}
           fontWeight={"light"}
@@ -53,7 +54,7 @@ const GoldValet = () => {
 
         <Text
           textAlign={"center"}
-          fontSize={"md"}
+          fontSize={{ base: "xs", md: "md" }}
           letterSpacing={"2px"}
           textColor={"green.300"}
           fontWeight={"bold"}
