@@ -25,7 +25,7 @@ const Home = () => {
         muted
         loop
       />
-      {isSmallerThanMd && <OutclassInfoHeader />}
+      {!isSmallerThanMd && <OutclassInfoHeader />}
       <OutclassNavigation />
       <Flex
         direction={"column"}
