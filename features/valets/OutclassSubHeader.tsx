@@ -1,7 +1,10 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Highlight, Text } from "@chakra-ui/react";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const OutclassSubHeader = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex
       gap={4}
@@ -18,10 +21,12 @@ const OutclassSubHeader = () => {
         fontStyle={"italic"}
         textColor={"white"}
       >
-        <span style={{ color: "#68D391" }}>{"DISCOVER "} </span>OUR
-        <span style={{ color: "#68D391" }}>{" SPECIALIZED "}</span>
-        DETAILING
-        <span style={{ color: "#68D391" }}>{" VALET "}</span> PACKAGES
+        <Highlight
+          query={["DISCOVER", "SPECIALIZED", "VALET"]}
+          styles={{ textColor: "green.300" }}
+        >
+          {translations.discoverDetailingValetsText}
+        </Highlight>
       </Text>
     </Flex>
   );

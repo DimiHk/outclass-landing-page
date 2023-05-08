@@ -3,8 +3,11 @@ import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const VicePresidenteSubscription = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex
       direction={"column"}
@@ -33,7 +36,7 @@ const VicePresidenteSubscription = () => {
           textColor={"white"}
           fontWeight={"light"}
         >
-          VICE-PRESIDENTE SUBSCRIPTION
+          {translations.vicePresidente}
         </Text>
 
         <Text
@@ -43,7 +46,7 @@ const VicePresidenteSubscription = () => {
           textColor={"green.300"}
           fontWeight={"bold"}
         >
-          1210€ + 20% ON OUR SERVICES
+          {translations.vicePresidenteSubtitle}
         </Text>
       </Flex>
       <Divider opacity={"10%"} />
@@ -61,7 +64,7 @@ const VicePresidenteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              10X BRONZE VALETS
+              {translations.vipBronzeValetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -78,7 +81,7 @@ const VicePresidenteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              1X SILVER VALET
+              {translations.vipViceSilverValetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -94,7 +97,7 @@ const VicePresidenteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              1X GOLD VALET
+              {translations.vipViceGoldValetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -110,7 +113,7 @@ const VicePresidenteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              MOT BY US
+              {translations.vipMotText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

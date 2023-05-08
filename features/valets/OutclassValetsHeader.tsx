@@ -1,7 +1,9 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
+import useLocal from "../../hooks/useLocal";
 
 const OutclassValetsHeader = () => {
+  const { translations } = useLocal();
   return (
     <Text
       textAlign={"center"}
@@ -11,7 +13,7 @@ const OutclassValetsHeader = () => {
       fontWeight={"bold"}
       fontStyle={"italic"}
     >
-      OUTCLASS VALETS
+      {translations.outclassValetsText}
     </Text>
   );
 };

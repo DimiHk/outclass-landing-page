@@ -1,6 +1,6 @@
 import React from "react";
 import withLandingLayout from "../layouts/LandingPageLayout";
-import { AspectRatio, Center, Grid, GridItem } from "@chakra-ui/react";
+import { Center, Grid, GridItem } from "@chakra-ui/react";
 import VipHeader from "../features/vip/VipHeader";
 import EliteSubscription from "../features/vip/EliteSubscription";
 import VicePresidenteSubscription from "../features/vip/VicePresidenteSubscription";
@@ -23,21 +23,19 @@ const Vip = () => {
           </GridItem>
 
           <GridItem h={{ base: "100vh", lg: "100vh" }} colSpan={2}>
-            <AspectRatio ratio={16 / 9}>
-              <video
-                style={{
-                  width: "100%",
-                  height: isSmallerThanMd ? "100vh" : "450px",
-                  objectFit: "cover",
-                  aspectRatio: "auto",
-                  borderRadius: "0.5rem",
-                }}
-                src="vip.mp4"
-                muted
-                autoPlay
-                loop
-              />
-            </AspectRatio>
+            <video
+              style={{
+                width: "100%",
+                height: isSmallerThanMd ? "100vh" : "450px",
+                objectFit: "cover",
+                aspectRatio: "auto",
+                borderRadius: "0.5rem",
+              }}
+              src="vip.mp4"
+              muted
+              autoPlay
+              loop
+            />
           </GridItem>
         </Grid>
       </Center>

@@ -8,6 +8,7 @@ import {
   Flex,
   Grid,
   GridItem,
+  Highlight,
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -17,6 +18,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/pro-solid-svg-icons";
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 import useQuery from "../hooks/useQuery";
+import useLocal from "../hooks/useLocal";
 
 const PDFViewer = () => {
   return (
@@ -30,23 +32,7 @@ const PDFViewer = () => {
 
 const ProtectionFilm = () => {
   const { isSmallerThanMd } = useQuery();
-
-  const fullVehicle = [
-    "FULL FRONT AND REAR BUMPER",
-    "FULL HOOD, ROOF AND TRUNK",
-    "FULL DRIVER AND PASSENGER SIDE",
-    "FULL QUARTER AND ROCKER PANELS",
-    "SIDE VIEW MIRRORS",
-    "HEADLIGHTS",
-  ];
-
-  const fullFront = [
-    "FULL HOOD",
-    "FULL FENDERS",
-    "FULL FRONT BUMPER",
-    "SIDE VIEW MIRRORS",
-    "HEADLIGHTS",
-  ];
+  const { translations } = useLocal();
 
   return (
     <React.Fragment>
@@ -59,7 +45,7 @@ const ProtectionFilm = () => {
           fontWeight={"bold"}
           fontStyle={"italic"}
         >
-          PPF PACKAGES
+          {translations.ppfTitleText}
         </Text>
         <Text
           textAlign={"center"}
@@ -69,9 +55,12 @@ const ProtectionFilm = () => {
           fontStyle={"italic"}
           textColor={"white"}
         >
-          <span style={{ color: "#68D391" }}> CHECK {" OUR "} </span> PPF
-          PACKAGES
-          <span style={{ color: "#68D391" }}>{" HERE "}! </span>
+          <Highlight
+            query={["OUR", "HERE"]}
+            styles={{ textColor: "green.300" }}
+          >
+            {translations.ppfText}
+          </Highlight>
         </Text>
         <Grid templateColumns="repeat(2, 1fr)" padding={6} gap={12}>
           <GridItem colSpan={isSmallerThanMd ? 2 : 1} h={"100%"}>
@@ -101,7 +90,7 @@ const ProtectionFilm = () => {
                   textColor={"white"}
                   fontWeight={"light"}
                 >
-                  FULL FRONT END KIT
+                  {translations.ppfFullFrontText}
                 </Text>
 
                 <Button
@@ -118,7 +107,7 @@ const ProtectionFilm = () => {
                     fontWeight={"semibold"}
                     fontSize={"2xs"}
                   >
-                    GET QUOTE
+                    {translations.getQuote}
                   </Text>
                 </Button>
               </Flex>
@@ -150,7 +139,7 @@ const ProtectionFilm = () => {
                   justify={"center"}
                   gap={4}
                 >
-                  {fullFront.map((service) => {
+                  {translations.fullFrontKitList.map((service) => {
                     return (
                       <Flex key={service} gap={2}>
                         <Text
@@ -200,7 +189,7 @@ const ProtectionFilm = () => {
                   textColor={"white"}
                   fontWeight={"light"}
                 >
-                  COMPLETE COVERAGE
+                  {translations.ppfCompleteCoverageText}
                 </Text>
 
                 <Button
@@ -217,7 +206,7 @@ const ProtectionFilm = () => {
                     fontWeight={"semibold"}
                     fontSize={"2xs"}
                   >
-                    GET QUOTE
+                    {translations.getQuote}
                   </Text>
                 </Button>
               </Flex>
@@ -249,7 +238,7 @@ const ProtectionFilm = () => {
                   justify={"center"}
                   gap={4}
                 >
-                  {fullVehicle.map((service) => {
+                  {translations.completeCoverageList.map((service) => {
                     return (
                       <Flex
                         align={"center"}
@@ -305,7 +294,7 @@ const ProtectionFilm = () => {
                 fontWeight={"bold"}
                 fontStyle={"italic"}
               >
-                OFFICIAL CATALOGUE
+                {translations.ppfCatalogueTitle}
               </Text>
               <Text
                 textAlign={"center"}
@@ -315,9 +304,12 @@ const ProtectionFilm = () => {
                 fontStyle={"italic"}
                 textColor={"white"}
               >
-                <span style={{ color: "#68D391" }}> CHECK {" OUR "} </span>{" "}
-                OFICCIAL PPF
-                <span style={{ color: "#68D391" }}>{" CATALOGUE "} </span>
+                <Highlight
+                  query={["OUR", "CATALOGUE"]}
+                  styles={{ textColor: "green.300" }}
+                >
+                  {translations.ppfCatalogText}
+                </Highlight>
               </Text>
               <PDFViewer />
             </Flex>

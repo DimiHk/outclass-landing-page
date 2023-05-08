@@ -1,11 +1,21 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Button, Flex, Select, Text } from "@chakra-ui/react";
 import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faLocationDot } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
+import useLocal from "../hooks/useLocal";
 
 const OutclassInfoHeader = () => {
+  const router = useRouter();
+  const { locale, translations } = useLocal();
+
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    router.push(router.pathname, router.asPath, { locale });
+  };
+
   return (
     <Flex
       padding={{ base: 4, xl: 2 }}
@@ -55,7 +65,6 @@ const OutclassInfoHeader = () => {
           </a>
         </Text>
       </Flex>
-
       <Flex align={"center"} justify={"center"} gap={2.5}>
         <FontAwesomeIcon icon={faAt} color="white" size="sm" />
         <Text letterSpacing={"2px"} textColor={"white"} fontSize={"xs"}>
@@ -68,7 +77,6 @@ const OutclassInfoHeader = () => {
           </a>
         </Text>
       </Flex>
-
       <Link
         target="_blank"
         rel="noopener noreferrer"
@@ -86,12 +94,33 @@ const OutclassInfoHeader = () => {
         >
           <Flex align={"center"} justify={"center"} gap={2}>
             <Text letterSpacing={"2px"} fontSize={"2xs"}>
-              WHERE TO FIND US
+              {translations.whereToFindUsText}
             </Text>
             <FontAwesomeIcon size="sm" icon={faLocationDot} />
           </Flex>
         </Button>
       </Link>
+      <Flex align={"center"} justify={"center"} gap={2.5}>
+        <Select
+          size={"sm"}
+          colorScheme={"whiteAlpha"}
+          color={"white"}
+          iconColor={"white"}
+          onChange={changeLanguage}
+          defaultValue={locale}
+          borderRadius={"base"}
+        >
+          <option style={{ color: "black" }} value="en">
+            EN
+          </option>
+          <option style={{ color: "black" }} value="pt">
+            PT
+          </option>
+          <option style={{ color: "black" }} value="es">
+            ES
+          </option>
+        </Select>
+      </Flex>
     </Flex>
   );
 };

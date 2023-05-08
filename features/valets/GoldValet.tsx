@@ -3,8 +3,11 @@ import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const GoldValet = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex
       width={"full"}
@@ -37,7 +40,7 @@ const GoldValet = () => {
           fontWeight={"light"}
           boxShadow={"rgba(154, 230, 180, 0.15)  0px 10px 50px"}
         >
-          MOST SELLED VALET
+          {translations.mostSold}
         </Text>
       </Center>
 
@@ -76,7 +79,7 @@ const GoldValet = () => {
           fontWeight={"semibold"}
           fontSize={"xs"}
         >
-          INTERIOR
+          {translations.valetInteriorText}
         </Text>
         <Divider opacity={"10%"} />
         <Flex gap={3.5} padding={4} direction={"column"}>
@@ -87,7 +90,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              METICULOS VACUUM
+              {translations.meticulousVaccumText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -103,7 +106,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              COMPRESSED AIR TECHNIQUE
+              {translations.compressedAirText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -120,7 +123,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              WASHED UPHOLSTERY
+              {translations.washedUpholsteryText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -136,7 +139,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              CLEAN CARPET
+              {translations.cleanCarpetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -152,10 +155,10 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              CLEAN INTERIOR COPARTIMENT & CONDITIONED
+              {translations.cleanInteriorCopartimentText}
             </Text>
             <Badge colorScheme="green" fontWeight={"light"}>
-              DEEP CLEAN
+              {translations.deepClean}
             </Badge>
           </Flex>
           <Divider opacity={"10%"} />
@@ -166,7 +169,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              AIR FRESHENER
+              {translations.airFreshenerText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -183,7 +186,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              COMPLETE HYGIENIZATION - INTERIOR CONDITIONING
+              {translations.completeHygienizationText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -199,7 +202,7 @@ const GoldValet = () => {
           fontWeight={"semibold"}
           fontSize={"xs"}
         >
-          EXTERIOR
+          {translations.valetExteriorText}
         </Text>
         <Divider opacity={"10%"} />
         <Flex gap={3.5} padding={4} direction={"column"}>
@@ -217,10 +220,10 @@ const GoldValet = () => {
                   colorScheme={"green"}
                   textAlign={"center"}
                 >
-                  7 STEP
+                  {translations.fiveStep}
                 </Badge>
               }
-              {" WASH"}
+              {translations.wash}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -236,7 +239,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              DETAILED ALLOYS AND TABS
+              {translations.detailedAlloysAndTabs}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -253,7 +256,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              DETAILED DOORS AND FOOTSTEPS
+              {translations.detailedDoors}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -269,7 +272,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              DETAILED BRUSH USAGE FOR DIFFICULT ACCESS AREAS
+              {translations.detailedBrushUsage}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -285,7 +288,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              TOWEL DRIED
+              {translations.towelDried}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -301,7 +304,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              TIRE & PLASTIC - DRESSING
+              {translations.tireAndPlasticDressing}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -317,7 +320,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              DETAILED ENGINE BAY
+              {translations.detailedEngine}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -333,7 +336,7 @@ const GoldValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              POLISHED EXHAUST TIPS
+              {translations.polishedExhaust}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

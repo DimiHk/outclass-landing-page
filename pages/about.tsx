@@ -1,27 +1,13 @@
 import React from "react";
 import withLandingLayout from "../layouts/LandingPageLayout";
-import { Divider, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import { Divider, Flex, Highlight, SimpleGrid, Text } from "@chakra-ui/react";
 import Image from "next/image";
 import GroupImage from "../public/lotus-yasha.jpg";
+import useLocal from "../hooks/useLocal";
 
-const about = () => {
-  const whatWeMaster = [
-    "PAINT CORRECTION & POLISH",
-    "INTERIOR RESTORATION LUX",
-    "INTERIOR & EXTERIOR DETAILING",
-    "ELITE CERAMIC COATING",
-    "SUBSCRIPTIONS - VIP CLUB",
-    "WINDOW TINT (DARK OR OTHERS)",
-    "DENT REMOVAL - PDR",
-    "PROTECTION FILM - PPF",
-    "HEADLIGHT RESTORATION",
-    "WHEEL RESTORATION",
-    "WORKSHOPS",
-    "ACCESSORIES",
-    "IMT & ISV",
-    "TECHINCAL REVISION",
-    "TIRES AND OTHERS",
-  ];
+const About = () => {
+  const { translations } = useLocal();
+
   return (
     <React.Fragment>
       <SimpleGrid
@@ -39,7 +25,7 @@ const about = () => {
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              WHO WE ARE
+              {translations.aboutUsWhoWeAreTitle}
             </Text>
             <Text
               textAlign={"center"}
@@ -49,9 +35,12 @@ const about = () => {
               fontStyle={"italic"}
               textColor={"white"}
             >
-              <span style={{ color: "#68D391" }}> THE {" BEST "} </span>{" "}
-              DETAILERS OUT
-              <span style={{ color: "#68D391" }}>{" THERE "}! </span>
+              <Highlight
+                query={["BEST", "THERE"]}
+                styles={{ textColor: "green.300" }}
+              >
+                {translations.aboutUsWhoWeAreSubtitleText}
+              </Highlight>
             </Text>
 
             <Text
@@ -61,8 +50,7 @@ const about = () => {
               textColor={"white"}
               fontWeight={"light"}
             >
-              {`
-We are proud to be one of the largest detailing companies in Portugal, with an extensive network that covers the entire region and even extends to Western Spain.`}
+              {translations.aboutUsFirstText}
             </Text>
           </Flex>
           <Divider opacity={"10%"} />
@@ -75,7 +63,7 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              OUR MISSION IS
+              {translations.aboutUsMissionTitle}
             </Text>
             <Text
               textAlign={"center"}
@@ -85,11 +73,12 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
               fontStyle={"italic"}
               textColor={"white"}
             >
-              TO
-              <span style={{ color: "#68D391" }}>{" SATISFY "}</span>&
-              <span style={{ color: "#68D391" }}>{" PROVIDE  "}</span>
-              THE BEST HIGH QUALITY{" "}
-              <span style={{ color: "#68D391" }}>{" SERVICE  "}</span>
+              <Highlight
+                query={["SATISFY", "PROVIDE", "SERVICE"]}
+                styles={{ textColor: "green.300" }}
+              >
+                {translations.aboutUsMissionSubtitle}
+              </Highlight>
             </Text>
             <Flex justify={"center"} direction={"column"} gap={4}>
               <Text
@@ -99,7 +88,7 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
                 textColor={"white"}
                 fontWeight={"light"}
               >
-                {`Our passionate and professional team is dedicated to providing solutions to your problems with trust and mastery.`}
+                {translations.aboutUsMissionText}
               </Text>
               <Text
                 textAlign={"start"}
@@ -108,7 +97,7 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
                 textColor={"white"}
                 fontWeight={"light"}
               >
-                {`We strive for excellence in everything we do and take great pride in our work.`}
+                {translations.aboutUsMissionTextSecond}
               </Text>
             </Flex>
           </Flex>
@@ -143,7 +132,7 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
           fontWeight={"bold"}
           fontStyle={"italic"}
         >
-          WHAT SOLUTIONS DO WE MASTER ?
+          {translations.aboutUsSolutionTitle}
         </Text>
         <Text
           textAlign={"center"}
@@ -153,11 +142,12 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
           fontStyle={"italic"}
           textColor={"white"}
         >
-          HERE ARE <span style={{ color: "#68D391" }}>{" ALL "}</span>
-          THE
-          <span style={{ color: "#68D391" }}>{" SOLUTIONS "}</span> THAT WE
-          CURRENTLY
-          <span style={{ color: "#68D391" }}>{" MASTER "}</span>
+          <Highlight
+            query={["ALL", "SOLUTIONS", "MASTER"]}
+            styles={{ textColor: "green.300" }}
+          >
+            {translations.aboutUsSolutionText}
+          </Highlight>
         </Text>
         <Flex
           justify={"center"}
@@ -169,7 +159,7 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
           maxWidth={"container.xl"}
           borderRadius={"base"}
         >
-          {whatWeMaster.map((service) => {
+          {translations.servicesListText.map((service) => {
             return (
               <Flex
                 key={service}
@@ -202,4 +192,4 @@ We are proud to be one of the largest detailing companies in Portugal, with an e
   );
 };
 
-export default withLandingLayout(about);
+export default withLandingLayout(About);

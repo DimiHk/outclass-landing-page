@@ -3,8 +3,11 @@ import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const EliteSubscription = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex
       direction={"column"}
@@ -32,7 +35,7 @@ const EliteSubscription = () => {
           textColor={"white"}
           fontWeight={"light"}
         >
-          ELITE SUBSCRIPTION
+          {translations.vipEliteTitle}
         </Text>
 
         <Text
@@ -42,7 +45,7 @@ const EliteSubscription = () => {
           textColor={"green.300"}
           fontWeight={"bold"}
         >
-          1900€ + 30% ON OUR SERVICES
+          {translations.vipEliteSubtitle}
         </Text>
       </Flex>
       <Divider opacity={"10%"} />
@@ -60,7 +63,7 @@ const EliteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              10X SILVER VALETS
+              {translations.vipEliteSilverValetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -77,7 +80,7 @@ const EliteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              2X GOLD VALETS
+              {translations.vipGoldValetsText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -93,7 +96,7 @@ const EliteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              FREE PICK UP
+              {translations.vipPickupText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -109,7 +112,7 @@ const EliteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              MOT BY US
+              {translations.vipMotText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -125,7 +128,7 @@ const EliteSubscription = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              SERVICES RELATED TO OIL CHANGES, TIRE MAINTANCE OR SIMILAR
+              {translations.vipServicesText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

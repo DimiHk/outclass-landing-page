@@ -1,7 +1,10 @@
 import React from "react";
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Highlight, Text } from "@chakra-ui/react";
+import useLocal from "../../hooks/useLocal";
 
 const PicturesHeader = () => {
+  const { translations } = useLocal();
+
   return (
     <React.Fragment>
       <Text
@@ -12,7 +15,7 @@ const PicturesHeader = () => {
         fontWeight={"bold"}
         fontStyle={"italic"}
       >
-        SERVICES PICTURES
+        {translations.valetsPicturesTitle}
       </Text>
       <Flex
         gap={4}
@@ -29,11 +32,12 @@ const PicturesHeader = () => {
           fontStyle={"italic"}
           textColor={"white"}
         >
-          <span style={{ color: "#68D391" }}>{"CHECK "} </span> OUT
-          <span style={{ color: "#68D391" }}>{" SOME "} </span> OF THE
-          <span style={{ color: "#68D391" }}>{" AMAZING "}</span>
-          WORK DONE BY OUR
-          <span style={{ color: "#68D391" }}>{" TEAM "}</span>!
+          <Highlight
+            query={["CHECK", "SOME", "AMAZING", "TEAM"]}
+            styles={{ textColor: "green.300" }}
+          >
+            {translations.valetsPicturesText}
+          </Highlight>
         </Text>
       </Flex>
     </React.Fragment>

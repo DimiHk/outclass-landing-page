@@ -3,8 +3,11 @@ import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const PlatValet = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex
       width={"full"}
@@ -37,7 +40,7 @@ const PlatValet = () => {
           fontWeight={"light"}
           boxShadow={"rgba(56, 178, 172, 0.15)  0px 5px 30px"}
         >
-          TOP TIER VALET
+          {translations.topTierValet}
         </Text>
       </Center>
       <Flex justify={"space-between"} padding={2} align={"center"}>
@@ -75,7 +78,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              1X GOLD VALET
+              {translations.vipViceGoldValetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -91,7 +94,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              TECHNICAL POLISHMENT
+              {translations.technicalPolishmentText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -108,7 +111,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              PAINT PROTECTION
+              {translations.paintProtectionText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -124,7 +127,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              CERAMIC COATING ON ALLOYS
+              {translations.ceramicCoatingAlloysText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -140,7 +143,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              WATERPROOFING FABRICS 12 MONTHS
+              {translations.waterproofFabricText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -156,7 +159,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              LEATHER PROTECTION 12 MONTHS
+              {translations.leatherProtectionText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

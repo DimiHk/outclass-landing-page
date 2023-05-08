@@ -1,7 +1,10 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Highlight, Text } from "@chakra-ui/react";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const VipHeader = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex direction={"column"} gap={2}>
       <Text
@@ -12,7 +15,7 @@ const VipHeader = () => {
         fontWeight={"bold"}
         fontStyle={"italic"}
       >
-        VIP CLUB SUBSCRIPTIONS
+        {translations.vipTitle}
       </Text>
       <Flex
         gap={4}
@@ -29,11 +32,12 @@ const VipHeader = () => {
           fontStyle={"italic"}
           textColor={"white"}
         >
-          <span style={{ color: "#68D391" }}>{"JOIN "} </span> OUR VIP
-          MEMBERSHIP &<span style={{ color: "#68D391" }}>{" ENJOY "} </span>
-          THE ULTIMATE
-          <span style={{ color: "#68D391" }}>{" LUXURY "}</span> CAR DETAILING
-          <span style={{ color: "#68D391" }}>{" SERVICE "} </span>
+          <Highlight
+            query={["JOIN", "ENJOY", "LUXURY", "SERVICE"]}
+            styles={{ textColor: "green.300" }}
+          >
+            {translations.vipSubtitleText}
+          </Highlight>
         </Text>
       </Flex>
     </Flex>

@@ -7,7 +7,7 @@ const useLocal = () => {
   const router = useRouter();
   const { locale } = router;
   const translations = locale === "en" ? en : locale === "pt" ? pt : es;
-  return translations;
+  return { locale, translations };
 };
 
 export default useLocal;

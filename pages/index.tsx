@@ -10,8 +10,7 @@ import useLocal from "../hooks/useLocal";
 
 const Home = () => {
   const { isSmallerThanMd } = useQuery();
-  const translations = useLocal();
-  console.log(translations);
+  const { translations } = useLocal();
   return (
     <React.Fragment>
       <video
@@ -58,7 +57,7 @@ const Home = () => {
             fontStyle={"italic"}
             textAlign={{ base: "center", sm: "start" }}
           >
-            “EXCELLENCE IS EARNED, NOT PROCLAIMED”
+            “{translations.slogan}”
           </Text>
         </Flex>
         <Text
@@ -74,8 +73,7 @@ const Home = () => {
             query={["EXPERT", "DETAILERS", "PROVIDE", "QUALITY", "DETAILING"]}
             styles={{ textColor: "green.300" }}
           >
-            OUR TEAM OF EXPERT CAR DETAILERS IS HERE TO PROVIDE YOU WITH THE
-            HIGHEST QUALITY CAR CLEANING AND DETAILING SERVICES.
+            {translations.mainPageText}
           </Highlight>
         </Text>
         <Flex direction={{ base: "column", sm: "row" }} marginTop={2} gap={4}>
@@ -90,7 +88,8 @@ const Home = () => {
               }}
             >
               <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-                CHECK VIP CLUBE <FontAwesomeIcon icon={faDollarSign} />
+                {translations.checkVipClubButtonText}
+                <FontAwesomeIcon icon={faDollarSign} />
               </Text>
             </Button>
           </Link>
@@ -105,7 +104,8 @@ const Home = () => {
               }}
             >
               <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-                CHECK OUR VALETS <FontAwesomeIcon icon={faArrowRight} />
+                {translations.checkValetsButtonText}
+                <FontAwesomeIcon icon={faArrowRight} />
               </Text>
             </Button>
           </Link>

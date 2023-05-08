@@ -6,8 +6,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
+import useLocal from "../../hooks/useLocal";
 
 const SilverValet = () => {
+  const { translations } = useLocal();
+
   return (
     <Flex
       width={"full"}
@@ -58,7 +61,7 @@ const SilverValet = () => {
           fontWeight={"semibold"}
           fontSize={"xs"}
         >
-          INTERIOR
+          {translations.valetInteriorText}
         </Text>
         <Divider opacity={"10%"} />
         <Flex gap={3.5} padding={4} direction={"column"}>
@@ -69,7 +72,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              METICULOS VACUUM
+              {translations.meticulousVaccumText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -85,7 +88,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              COMPRESSED AIR TECHNIQUE
+              {translations.compressedAirText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -102,7 +105,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              WASHED UPHOLSTERY
+              {translations.washedUpholsteryText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -119,7 +122,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              CLEAN CARPET
+              {translations.cleanCarpetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -135,7 +138,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              CLEAN INTERIOR COPARTIMENT & CONDITIONED
+              {translations.cleanInteriorCopartimentText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -151,7 +154,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              AIR FRESHENER
+              {translations.airFreshenerText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -168,7 +171,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              COMPLETE HYGIENIZATION - INTERIOR CONDITIONING
+              {translations.completeHygienizationText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -186,7 +189,7 @@ const SilverValet = () => {
           fontWeight={"semibold"}
           fontSize={"xs"}
         >
-          EXTERIOR
+          {translations.valetExteriorText}
         </Text>
         <Divider opacity={"10%"} />
 
@@ -205,10 +208,10 @@ const SilverValet = () => {
                   colorScheme={"green"}
                   textAlign={"center"}
                 >
-                  5 STEP
+                  {translations.fiveStep}
                 </Badge>
               }
-              {" WASH"}
+              {translations.wash}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -224,7 +227,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              DETAILED ALLOYS
+              {translations.detailedAlloys}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -241,7 +244,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              WHELL ARM WHOLES
+              {translations.whellArm}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -257,7 +260,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              DETAILED BRUSH USAGE FOR DIFFICULT ACCESS AREAS
+              {translations.detailedBrushUsage}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -273,7 +276,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              TOWEL DRIED
+              {translations.towelDried}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -289,7 +292,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              TIRE & PLASTIC - DRESSING
+              {translations.tireAndPlasticDressing}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
