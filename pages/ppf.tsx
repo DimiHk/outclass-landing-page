@@ -107,7 +107,13 @@ const ProtectionFilm = () => {
                     fontWeight={"semibold"}
                     fontSize={"2xs"}
                   >
-                    {translations.getQuote}
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`mailto:geral@outclasscardetail.com`}
+                    >
+                      {translations.getQuote}
+                    </a>
                   </Text>
                 </Button>
               </Flex>
