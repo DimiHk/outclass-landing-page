@@ -1,6 +1,7 @@
 import React from "react";
 import withLandingLayout from "../layouts/LandingPageLayout";
 import { Center, Flex, SimpleGrid, Text } from "@chakra-ui/react";
+import useLocal from "../hooks/useLocal";
 
 const Detailing = () => {
   const carDetailingSteps = [
@@ -44,6 +45,8 @@ const Detailing = () => {
     "GIVING PAINTWORK UV RESISTANCE, DIRT REPELLENCY, EASY CLEAN AND SWIRL RESISTANCE THANKS TO THE STATE OF THE ART NANO QUARTZ COATINGS, ALLOY WHEELS ARE REMOVED TO BE COATED INSIDE AND OUT, EXTERIOR GLASS SEALED WITH A DURABLE RAIN REPELLENT, INTERIOR UPHOLSTERY TREATED TO A SCOTCH GUARD FABRIC PROTECTANT AND LEATHER SEATS RECEIVING A WATER-BASED DIRT & DYE TRANSFER BARRIER.",
   ];
 
+  const { translations } = useLocal();
+
   return (
     <React.Fragment>
       <Center>
@@ -57,7 +60,7 @@ const Detailing = () => {
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              MASTER CORRECTION
+              { translations.detailingMasterCorrection }
             </Text>
 
             <Text
@@ -68,7 +71,7 @@ const Detailing = () => {
               fontStyle={"italic"}
               textColor={"green.300"}
             >
-              MULTI-STAGE CORRECTION
+              { translations.detailingMultiStageCorrection }
             </Text>
             <Flex
               direction={"column"}
@@ -81,7 +84,7 @@ const Detailing = () => {
               gap={4}
               height={"full"}
             >
-              {carDetailingSteps.map((detailing) => {
+              {translations.detailingSteps.map((detailing) => {
                 return (
                   <Text
                     key={detailing}
@@ -105,7 +108,7 @@ const Detailing = () => {
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              GOLD - PAINT ENHANCEMENT
+              { translations.detailingPaintEnhancement }
             </Text>
 
             <Text
@@ -116,7 +119,7 @@ const Detailing = () => {
               fontStyle={"italic"}
               textColor={"green.300"}
             >
-              2 - STAGE MILD CORRECTION
+              { translations.detailingMildCorrection }
             </Text>
             <Flex
               direction={"column"}
@@ -129,7 +132,7 @@ const Detailing = () => {
               gap={4}
               height={"full"}
             >
-              {carDetailingStepsTwo.map((detailing) => {
+              {translations.detailingStepsTwo.map((detailing) => {
                 return (
                   <Text
                     key={detailing}
@@ -153,7 +156,7 @@ const Detailing = () => {
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              PRIME PLUS - PAINT CORRECTION
+              { translations.detailingPrimePaintCorrection }
             </Text>
             <Flex
               direction={"column"}
@@ -166,7 +169,7 @@ const Detailing = () => {
               gap={4}
               height={"full"}
             >
-              {paintCorrectionDetail.map((detailing) => {
+              {translations.detailingPaintCorrection.map((detailing) => {
                 return (
                   <Text
                     key={detailing}
@@ -190,7 +193,7 @@ const Detailing = () => {
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              OUTCLASS SIGNATURE DETAIL
+              { translations.detailingOutclassSignature }
             </Text>
 
             <Flex
@@ -204,7 +207,7 @@ const Detailing = () => {
               gap={4}
               height={"full"}
             >
-              {carCarePackage.map((detailing) => {
+              {translations.detailingCarCarePackage.map((detailing) => {
                 return (
                   <Text
                     key={detailing}
@@ -228,7 +231,7 @@ const Detailing = () => {
               fontWeight={"bold"}
               fontStyle={"italic"}
             >
-              SHOWROOM CAR DETAIL
+              { translations.detailingShowroomDetail }
             </Text>
             <Flex
               direction={"column"}
@@ -241,7 +244,7 @@ const Detailing = () => {
               gap={4}
               height={"full"}
             >
-              {newCarDetail.map((detailing) => {
+              {translations.detailingNewCarDetail.map((detailing) => {
                 return (
                   <Text
                     key={detailing}
