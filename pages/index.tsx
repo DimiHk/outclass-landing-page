@@ -1,4 +1,4 @@
-import { Button, Flex, Heading, Highlight, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Highlight, Text } from "@chakra-ui/react";
 import { faArrowRight, faDollarSign } from "@fortawesome/pro-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
