@@ -98,7 +98,7 @@ const ShowRoom = () => {
             }}
             src={ImageOne}
             alt="work-one"
-            sizes="50vw"
+            sizes="25vw"
           />
           <Image
             quality={75}
@@ -112,7 +112,7 @@ const ShowRoom = () => {
             }}
             src={ImageTwo}
             alt="work-one"
-            sizes="50vw"
+            sizes="25vw"
           />
         </Flex>
       </Flex>

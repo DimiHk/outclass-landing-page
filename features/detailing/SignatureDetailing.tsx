@@ -98,7 +98,7 @@ export const SignatureDetailing = () => {
             }}
             src={ImageOne}
             alt="work-one"
-            sizes="50vw"
+            sizes="25vw"
           />
           <Image
             quality={75}
@@ -112,7 +112,7 @@ export const SignatureDetailing = () => {
             }}
             src={ImageTwo}
             alt="work-one"
-            sizes="50vw"
+            sizes="25vw"
           />
         </Flex>
       </Flex>

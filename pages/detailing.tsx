@@ -26,7 +26,6 @@ const Detailing = () => {
             width: "100%",
             height: "550px",
             objectFit: "cover",
-            aspectRatio: "16 / 9",
             borderRadius: "0.5rem",
           }}
           src="detailingVideo.mp4"
