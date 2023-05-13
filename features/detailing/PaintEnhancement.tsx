@@ -108,7 +108,7 @@ export const PaintEnhancement = () => {
               }}
               src={ImageOne}
               alt="work-one"
-              sizes="25vw"
+              sizes="50vw"
             />
           </Flex>
         </Flex>

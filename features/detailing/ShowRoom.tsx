@@ -112,7 +112,7 @@ const ShowRoom = () => {
             }}
             src={ImageTwo}
             alt="work-one"
-            sizes="25vw"
+            sizes="50vw"
           />
         </Flex>
       </Flex>
