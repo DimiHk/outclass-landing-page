@@ -1,4 +1,4 @@
-import { Flex, Divider, Text } from "@chakra-ui/react";
+import { Flex, Divider, Text, Button } from "@chakra-ui/react";
 import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -48,15 +48,15 @@ const EliteSubscription = () => {
           {translations.vipEliteSubtitle}
         </Text>
       </Flex>
-      <Divider opacity={"10%"} />
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 1.5 }}
       >
-        <Flex gap={3.5} padding={4} direction={"column"}>
-          <Flex gap={2}>
+        <Flex gap={{ base: 6, xl: 4 }} padding={4} direction={"column"}>
+          <Flex gap={2} width={"full"} justify={"space-between"}>
             <Text
               letterSpacing={"2px"}
               textColor={"white"}
@@ -73,7 +73,7 @@ const EliteSubscription = () => {
           </Flex>
 
           <Divider opacity={"10%"} />
-          <Flex gap={2}>
+          <Flex gap={2} width={"full"} justify={"space-between"}>
             <Text
               letterSpacing={"2px"}
               textColor={"white"}
@@ -89,7 +89,7 @@ const EliteSubscription = () => {
             />
           </Flex>
           <Divider opacity={"10%"} />
-          <Flex gap={2}>
+          <Flex gap={2} width={"full"} justify={"space-between"}>
             <Text
               letterSpacing={"2px"}
               textColor={"white"}
@@ -105,7 +105,7 @@ const EliteSubscription = () => {
             />
           </Flex>
           <Divider opacity={"10%"} />
-          <Flex gap={2}>
+          <Flex gap={2} width={"full"} justify={"space-between"}>
             <Text
               letterSpacing={"2px"}
               textColor={"white"}
@@ -121,7 +121,7 @@ const EliteSubscription = () => {
             />
           </Flex>
           <Divider opacity={"10%"} />
-          <Flex gap={2}>
+          <Flex gap={2} width={"full"} justify={"space-between"}>
             <Text
               letterSpacing={"2px"}
               textColor={"white"}
@@ -136,6 +136,32 @@ const EliteSubscription = () => {
               color={"lightGreen"}
             />
           </Flex>
+          <Divider opacity={"10%"} />
+        </Flex>
+        <Flex justify={"flex-end"} width={"full"} padding={2}>
+          <Button
+            width={"full"}
+            textColor={"gray.900"}
+            backgroundColor={"whiteAlpha.500"}
+            _hover={{
+              backgroundColor: "blackAlpha.500",
+              color: "white",
+            }}
+          >
+            <Text
+              letterSpacing={"2px"}
+              fontWeight={"semibold"}
+              fontSize={"2xs"}
+            >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`mailto:geral@outclasscardetail.com`}
+              >
+                {translations.subscribeToVip}
+              </a>
+            </Text>
+          </Button>
         </Flex>
       </motion.div>
     </Flex>

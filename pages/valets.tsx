@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Center, Flex } from "@chakra-ui/react";
 import React from "react";
 import withLandingLayout from "../layouts/LandingPageLayout";
 import OutclassValetsHeader from "../features/valets/OutclassValetsHeader";
@@ -17,15 +17,21 @@ const Services = () => {
         <OutclassSubHeader />
       </Flex>
       <Flex
-        direction={{ base: "column", lg: "row" }}
+        direction={{ base: "column", xl: "row" }}
         justify={"center"}
         gap={12}
         align={"flex-start"}
         padding={4}
       >
-        <SilverValet />
-        <GoldValet />
-        <PlatValet />
+        <Center width={"full"}>
+          <SilverValet />
+        </Center>
+        <Center width={"full"}>
+          <GoldValet />
+        </Center>
+        <Center width={"full"}>
+          <PlatValet />
+        </Center>
       </Flex>
       <Flex
         direction={"column"}

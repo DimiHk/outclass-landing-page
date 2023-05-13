@@ -1,4 +1,4 @@
-import { Flex, Divider, Badge, Text } from "@chakra-ui/react";
+import { Flex, Divider, Badge, Text, Button } from "@chakra-ui/react";
 import {
   faCheckCircle,
   faCircleXmark,
@@ -7,13 +7,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
 import useLocal from "../../hooks/useLocal";
+import Link from "next/link";
 
 const SilverValet = () => {
   const { translations } = useLocal();
 
   return (
     <Flex
-      width={"full"}
+      width={{ base: "full", sm: "xl", xl: "full" }}
       height={"full"}
       direction={"column"}
       cursor={"pointer"}
@@ -207,6 +208,7 @@ const SilverValet = () => {
                   fontWeight={"light"}
                   colorScheme={"green"}
                   textAlign={"center"}
+                  marginEnd={2}
                 >
                   {translations.fiveStep}
                 </Badge>
@@ -300,6 +302,32 @@ const SilverValet = () => {
               color={"lightGreen"}
             />
           </Flex>
+          <Divider opacity={"10%"} />
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`mailto:geral@outclasscardetail.com`}
+            style={{ width: "100%" }}
+          >
+            <Button
+              width={"full"}
+              textColor={"gray.900"}
+              backgroundColor={"whiteAlpha.500"}
+              size={{ base: "sm", md: "md" }}
+              _hover={{
+                backgroundColor: "blackAlpha.500",
+                color: "white",
+              }}
+            >
+              <Text
+                letterSpacing={"2px"}
+                fontWeight={"semibold"}
+                fontSize={"2xs"}
+              >
+                {translations.getValet}
+              </Text>
+            </Button>
+          </Link>
         </Flex>
       </motion.div>
     </Flex>

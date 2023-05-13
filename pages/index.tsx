@@ -70,7 +70,24 @@ const Home = () => {
           opacity={"90%"}
         >
           <Highlight
-            query={["EXPERT", "DETAILERS", "PROVIDE", "QUALITY", "DETAILING"]}
+            query={[
+              "EXPERTOS",
+              "EXPERT",
+              "DETAILERS",
+              "PROVIDE",
+              "QUALITY",
+              "DETAILING",
+              "ESPECIALISTAS",
+              "DETALHE",
+              "FORNECER",
+              "LIMPEZA",
+              "DETALHE",
+              "QUALIDADE",
+              "SERVICIOS",
+              "LIMPIEZA",
+              "DETALLADO",
+              "CALIDAD",
+            ]}
             styles={{ textColor: "green.300" }}
           >
             {translations.mainPageText}

@@ -33,7 +33,20 @@ const VipHeader = () => {
           textColor={"white"}
         >
           <Highlight
-            query={["JOIN", "ENJOY", "LUXURY", "SERVICE"]}
+            query={[
+              "JOIN",
+              "ENJOY",
+              "LUXURY",
+              "SERVICE",
+              "JUNTE-SE",
+              "VIP",
+              "SERVIÇO",
+              "DETALHE",
+              "LUXO",
+              "ÚNETE",
+              "SERVICIO",
+              "LUJO",
+            ]}
             styles={{ textColor: "green.300" }}
           >
             {translations.vipSubtitleText}

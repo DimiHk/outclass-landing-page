@@ -118,6 +118,7 @@ const OutclassNavigation = () => {
         </Link>
         <Link href={"/vip"} prefetch={false}>
           <Button
+            position={"relative"}
             textColor={"white"}
             backgroundColor={"whiteAlpha.500"}
             _hover={{
@@ -128,8 +129,7 @@ const OutclassNavigation = () => {
             <Text
               position={"absolute"}
               borderRadius={"base"}
-              right={"-70px"}
-              bottom={7}
+              bottom={8}
               backgroundColor={"green.200"}
               paddingRight={"12px"}
               paddingLeft={"12px"}
@@ -260,6 +260,7 @@ const MobileMenu = ({ isOpen, onClose }: any) => {
                 prefetch={false}
               >
                 <Button
+                  position={"relative"}
                   textColor={"white"}
                   backgroundColor={"whiteAlpha.500"}
                   _hover={{
@@ -270,8 +271,7 @@ const MobileMenu = ({ isOpen, onClose }: any) => {
                   <Text
                     position={"absolute"}
                     borderRadius={"base"}
-                    right={"-70px"}
-                    bottom={7}
+                    bottom={8}
                     backgroundColor={"green.200"}
                     paddingRight={"12px"}
                     paddingLeft={"12px"}

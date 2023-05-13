@@ -22,7 +22,16 @@ const OutclassSubHeader = () => {
         textColor={"white"}
       >
         <Highlight
-          query={["DISCOVER", "SPECIALIZED", "VALET"]}
+          query={[
+            "DISCOVER",
+            "SPECIALIZED",
+            "VALET",
+            "PACOTES",
+            "DESCUBRA",
+            "SERVIÇOS",
+            "PAQUETES",
+            "DESCUBRE",
+          ]}
           styles={{ textColor: "green.300" }}
         >
           {translations.discoverDetailingValetsText}

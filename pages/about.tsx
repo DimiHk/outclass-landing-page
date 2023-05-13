@@ -1,6 +1,13 @@
 import React from "react";
 import withLandingLayout from "../layouts/LandingPageLayout";
-import { Divider, Flex, Highlight, SimpleGrid, Text } from "@chakra-ui/react";
+import {
+  Center,
+  Divider,
+  Flex,
+  Highlight,
+  SimpleGrid,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import GroupImage from "../public/lotus-yasha.jpg";
 import useLocal from "../hooks/useLocal";
@@ -36,7 +43,14 @@ const About = () => {
               textColor={"white"}
             >
               <Highlight
-                query={["BEST", "THERE"]}
+                query={[
+                  "BEST",
+                  "THERE",
+                  "MELHORES",
+                  "AÍ",
+                  "MEJORES",
+                  "MERCADO",
+                ]}
                 styles={{ textColor: "green.300" }}
               >
                 {translations.aboutUsWhoWeAreSubtitleText}
@@ -44,8 +58,8 @@ const About = () => {
             </Text>
 
             <Text
-              textAlign={"start"}
-              fontSize={"md"}
+              textAlign={"center"}
+              fontSize={"sm"}
               letterSpacing={"2px"}
               textColor={"white"}
               fontWeight={"light"}
@@ -74,7 +88,17 @@ const About = () => {
               textColor={"white"}
             >
               <Highlight
-                query={["SATISFY", "PROVIDE", "SERVICE"]}
+                query={[
+                  "SATISFY",
+                  "PROVIDE",
+                  "SERVICE",
+                  "FORNECER",
+                  "SERVIÇO",
+                  "QUALIDADE",
+                  "PROPORCIONAR",
+                  "SERVICIO",
+                  "CALIDAD",
+                ]}
                 styles={{ textColor: "green.300" }}
               >
                 {translations.aboutUsMissionSubtitle}
@@ -82,8 +106,8 @@ const About = () => {
             </Text>
             <Flex justify={"center"} direction={"column"} gap={4}>
               <Text
-                textAlign={"start"}
-                fontSize={"md"}
+                textAlign={"center"}
+                fontSize={"sm"}
                 letterSpacing={"2px"}
                 textColor={"white"}
                 fontWeight={"light"}
@@ -91,8 +115,8 @@ const About = () => {
                 {translations.aboutUsMissionText}
               </Text>
               <Text
-                textAlign={"start"}
-                fontSize={"md"}
+                textAlign={"center"}
+                fontSize={"sm"}
                 letterSpacing={"2px"}
                 textColor={"white"}
                 fontWeight={"light"}
@@ -102,20 +126,23 @@ const About = () => {
             </Flex>
           </Flex>
         </SimpleGrid>
-        <Image
-          quality={100}
-          className="services-images"
-          style={{
-            borderRadius: "0.5rem",
-            objectFit: "cover",
-            width: "100%",
-            cursor: "pointer",
-            boxShadow: "rgba(255, 255, 255, 0.02)  0px 10px 50px",
-          }}
-          src={GroupImage}
-          alt="group"
-          sizes="100vw"
-        />
+        <Center width={"full"} height={"full"} padding={6}>
+          <Image
+            quality={75}
+            className="services-images"
+            style={{
+              borderRadius: "0.5rem",
+              objectFit: "cover",
+              cursor: "pointer",
+              width: "100%",
+              height: "100%",
+              boxShadow: "rgba(255, 255, 255, 0.02)  0px 10px 50px",
+            }}
+            src={GroupImage}
+            alt="group"
+            sizes="50vw"
+          />
+        </Center>
       </SimpleGrid>
       <Flex
         justify={"center"}
@@ -143,7 +170,14 @@ const About = () => {
           textColor={"white"}
         >
           <Highlight
-            query={["ALL", "SOLUTIONS", "MASTER"]}
+            query={[
+              "ALL",
+              "SOLUTIONS",
+              "MASTER",
+              "AQUI",
+              "SOLUÇÕES",
+              "DOMINAMOS",
+            ]}
             styles={{ textColor: "green.300" }}
           >
             {translations.aboutUsSolutionText}

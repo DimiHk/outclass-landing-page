@@ -33,7 +33,19 @@ const PicturesHeader = () => {
           textColor={"white"}
         >
           <Highlight
-            query={["CHECK", "SOME", "AMAZING", "TEAM"]}
+            query={[
+              "CHECK",
+              "SOME",
+              "AMAZING",
+              "TEAM",
+              "CONFIRA",
+              "TRABALHOS",
+              "REALIZADOS",
+              "EQUIPA",
+              "EQUIPO",
+              "INCREÍBLES",
+              "VISTAZO",
+            ]}
             styles={{ textColor: "green.300" }}
           >
             {translations.valetsPicturesText}

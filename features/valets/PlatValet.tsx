@@ -1,16 +1,17 @@
-import { Flex, Divider, Text, Center } from "@chakra-ui/react";
+import { Flex, Divider, Text, Center, Button } from "@chakra-ui/react";
 import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
 import useLocal from "../../hooks/useLocal";
+import Link from "next/link";
 
 const PlatValet = () => {
   const { translations } = useLocal();
 
   return (
     <Flex
-      width={"full"}
+      width={{ base: "full", sm: "xl", xl: "full" }}
       height={"full"}
       position={"relative"}
       direction={"column"}
@@ -167,6 +168,32 @@ const PlatValet = () => {
               color={"lightGreen"}
             />
           </Flex>
+          <Divider opacity={"10%"} />
+          <Link
+            style={{ width: "100%" }}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`mailto:geral@outclasscardetail.com`}
+          >
+            <Button
+              width={"full"}
+              textColor={"gray.900"}
+              backgroundColor={"whiteAlpha.500"}
+              size={{ base: "sm", md: "md" }}
+              _hover={{
+                backgroundColor: "blackAlpha.500",
+                color: "white",
+              }}
+            >
+              <Text
+                letterSpacing={"2px"}
+                fontWeight={"semibold"}
+                fontSize={"2xs"}
+              >
+                {translations.getValet}
+              </Text>
+            </Button>
+          </Link>
         </Flex>
       </motion.div>
     </Flex>

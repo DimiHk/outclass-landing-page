@@ -1,16 +1,17 @@
-import { Flex, Divider, Badge, Text, Center } from "@chakra-ui/react";
+import { Flex, Divider, Badge, Text, Center, Button } from "@chakra-ui/react";
 import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
 import useLocal from "../../hooks/useLocal";
+import Link from "next/link";
 
 const GoldValet = () => {
   const { translations } = useLocal();
 
   return (
     <Flex
-      width={"full"}
+      width={{ base: "full", sm: "xl", xl: "full" }}
       height={"full"}
       position={"relative"}
       direction={"column"}
@@ -219,6 +220,7 @@ const GoldValet = () => {
                   fontWeight={"light"}
                   colorScheme={"green"}
                   textAlign={"center"}
+                  marginEnd={2}
                 >
                   {translations.fiveStep}
                 </Badge>
@@ -344,6 +346,32 @@ const GoldValet = () => {
               color={"lightGreen"}
             />
           </Flex>
+          <Divider opacity={"10%"} />
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`mailto:geral@outclasscardetail.com`}
+            style={{ width: "100%" }}
+          >
+            <Button
+              width={"full"}
+              textColor={"gray.900"}
+              backgroundColor={"whiteAlpha.500"}
+              size={{ base: "sm", md: "md" }}
+              _hover={{
+                backgroundColor: "blackAlpha.500",
+                color: "white",
+              }}
+            >
+              <Text
+                letterSpacing={"2px"}
+                fontWeight={"semibold"}
+                fontSize={"2xs"}
+              >
+                {translations.getValet}
+              </Text>
+            </Button>
+          </Link>
         </Flex>
       </motion.div>
     </Flex>
