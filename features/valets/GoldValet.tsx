@@ -1,5 +1,8 @@
 import { Flex, Divider, Badge, Text, Center, Button } from "@chakra-ui/react";
-import { faCheckCircle } from "@fortawesome/pro-regular-svg-icons";
+import {
+  faCheckCircle,
+  faCircleXmark,
+} from "@fortawesome/pro-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import React from "react";
@@ -344,6 +347,91 @@ const GoldValet = () => {
               opacity={"85%"}
               icon={faCheckCircle}
               color={"lightGreen"}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.technicalPolishmentText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.paintProtectionText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.ceramicCoatingAlloysText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.waterproofFabricText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.leatherProtectionText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
             />
           </Flex>
           <Divider opacity={"10%"} />

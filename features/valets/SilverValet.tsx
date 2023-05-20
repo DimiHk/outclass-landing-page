@@ -303,6 +303,91 @@ const SilverValet = () => {
             />
           </Flex>
           <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.technicalPolishmentText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.paintProtectionText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.ceramicCoatingAlloysText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.waterproofFabricText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.leatherProtectionText}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCircleXmark}
+              color={"danger"}
+              style={{ color: "#F56565" }}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
           <Link
             target="_blank"
             rel="noopener noreferrer"
