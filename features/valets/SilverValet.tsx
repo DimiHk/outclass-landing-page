@@ -246,7 +246,7 @@ const SilverValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              {translations.whellArm}
+              {translations.detailedDoors}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

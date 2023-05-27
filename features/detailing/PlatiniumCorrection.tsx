@@ -49,13 +49,13 @@ export const PlatiniumCorrection = () => {
             >
               <Highlight
                 query={[
-                  "PLATINUM",
                   "CORRECTION",
                   "CORREÇÃO",
                   "DE",
-                  "PLATINA",
                   "CORRECCIÓN",
                   "PLATINO",
+                  "PINTURA",
+                  "PAINT"
                 ]}
                 styles={{ textColor: "green.300" }}
               >

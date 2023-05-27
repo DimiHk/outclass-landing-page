@@ -79,7 +79,7 @@ const PlatValet = () => {
               fontWeight={"light"}
               fontSize={"2xs"}
             >
-              {translations.vipViceGoldValetText}
+              {translations.vipViceSilverValetText}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

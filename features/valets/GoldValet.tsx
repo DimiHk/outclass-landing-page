@@ -225,10 +225,26 @@ const GoldValet = () => {
                   textAlign={"center"}
                   marginEnd={2}
                 >
-                  {translations.fiveStep}
+                  {translations.sevenStep}
                 </Badge>
               }
               {translations.wash}
+            </Text>
+            <FontAwesomeIcon
+              opacity={"85%"}
+              icon={faCheckCircle}
+              color={"lightGreen"}
+            />
+          </Flex>
+          <Divider opacity={"10%"} />
+          <Flex gap={2}>
+            <Text
+              letterSpacing={"2px"}
+              textColor={"white"}
+              fontWeight={"light"}
+              fontSize={"2xs"}
+            >
+              {translations.detailedEngine}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}
@@ -310,22 +326,6 @@ const GoldValet = () => {
               fontSize={"2xs"}
             >
               {translations.tireAndPlasticDressing}
-            </Text>
-            <FontAwesomeIcon
-              opacity={"85%"}
-              icon={faCheckCircle}
-              color={"lightGreen"}
-            />
-          </Flex>
-          <Divider opacity={"10%"} />
-          <Flex gap={2}>
-            <Text
-              letterSpacing={"2px"}
-              textColor={"white"}
-              fontWeight={"light"}
-              fontSize={"2xs"}
-            >
-              {translations.detailedEngine}
             </Text>
             <FontAwesomeIcon
               opacity={"85%"}

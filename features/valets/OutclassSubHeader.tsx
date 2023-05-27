@@ -25,7 +25,7 @@ const OutclassSubHeader = () => {
           query={[
             "DISCOVER",
             "SPECIALIZED",
-            "VALET",
+            "VALETING",
             "PACOTES",
             "DESCUBRA",
             "SERVIÇOS",
