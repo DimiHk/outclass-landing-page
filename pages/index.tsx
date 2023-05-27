@@ -71,22 +71,25 @@ const Home = () => {
         >
           <Highlight
             query={[
-              "EXPERTOS",
-              "EXPERT",
-              "DETAILERS",
-              "PROVIDE",
-              "QUALITY",
+              "OUTCLASS",
+              "EQUIPA",
+              "EQUIPO",
+              "NOSSA",
+              "MASTERY",
+              "MAESTRÍA",
+              "MAESTRIA",
+              "EXPERTISE",
+              "EXPERIÊNCIA",
+              "EXPERIENCIA",
               "DETAILING",
-              "ESPECIALISTAS",
-              "DETALHE",
-              "FORNECER",
-              "LIMPEZA",
-              "DETALHE",
-              "QUALIDADE",
-              "SERVICIOS",
-              "LIMPIEZA",
+              "DETALHAMENTO",
               "DETALLADO",
-              "CALIDAD",
+              "SOLID",
+              "SUPERIOR",
+              "SUPERIOR",
+              "OPCIONES",
+              "OPTIONS",
+              "OPÇÕES"
             ]}
             styles={{ textColor: "green.300" }}
           >
@@ -121,7 +124,7 @@ const Home = () => {
               }}
             >
               <Text letterSpacing={"2px"} fontWeight={"light"} fontSize={"xs"}>
-                {translations.checkValetsButtonText}
+                {translations.checkAboutUsButtonText}
                 <FontAwesomeIcon icon={faArrowRight} />
               </Text>
             </Button>
